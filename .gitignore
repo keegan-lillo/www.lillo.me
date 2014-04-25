@@ -2,14 +2,6 @@
 .project
 .settings
 
-application/cache/*
-!application/cache/index.html
-!application/cache/.htaccess
-
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
-
 src/css/all.css
 src/js/main-min.js
 src/js/main-min.css
