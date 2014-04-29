@@ -2,9 +2,11 @@
 .project
 .settings
 
-src/css/all.css
-src/js/main-min.js
-src/js/main-min.css
+public/src/css/screen.css
+public/src/css/print.css
+public/src/css/ie.css
+public/src/js/main-min.js
+public/src/js/main-min.css
 
 *.css.map
 .sass-cache
