@@ -10,10 +10,10 @@ require.config(
 
 		'marionette' : 'bower_components/marionette/lib/core/amd/backbone.marionette',
 	    'backbone.wreqr' : 'bower_components/backbone.wreqr/lib/backbone.wreqr',
-	    'backbone.babysitter' : 'bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
+	    'backbone.babysitter' : 'bower_components/backbone.babysitter/lib/backbone.babysitter',
 		
 		'text' : 'bower_components/requirejs-text/text',
-		'tpl' : 'bower_components/requirejs-tpl-jcbrand/tpl',
+		'tpl' : 'bower_components/requirejs-tpl-jcbrand/tpl', 
 		'css' : '../css',
 		'templates' : '../templates',
 				

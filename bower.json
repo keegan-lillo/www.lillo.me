@@ -6,6 +6,8 @@
 	"private": true,
 
 	"dependencies": {
+		"foundation": "zurb/bower-foundation",
+	
 		"requirejs": "2.x",
 		"marionette": "1.x",
 		"require-css" : "",
