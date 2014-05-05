@@ -4,12 +4,16 @@ require.config(
 	
 	paths :
 	{
-		'jquery' : 'bower_components/jquery/jquery',
+		'jquery' : 'bower_components/jquery/dist/jquery',
 		'underscore' : 'bower_components/underscore/underscore',
 		'backbone' : 'bower_components/backbone/backbone',
-		'marionette' : 'bower_components/marionette/marionette',
+
+		'marionette' : 'bower_components/marionette/lib/core/amd/backbone.marionette',
+	    'backbone.wreqr' : 'bower_components/backbone.wreqr/lib/backbone.wreqr',
+	    'backbone.babysitter' : 'bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
 		
-		'text' : 'bower_components/require/text',
+		'text' : 'bower_components/requirejs-text/text',
+		'tpl' : 'bower_components/requirejs-tpl-jcbrand/tpl',
 		'css' : '../css',
 		'templates' : '../templates',
 				
@@ -19,7 +23,7 @@ require.config(
 	{
 		'*': 
 		{
-	    	'require-css': 'libs/require-css/css', //  path to require-css is
+	    	'require-css': 'bower_components/require-css/css', //  path to require-css is
 		}
 	},
 	
@@ -27,10 +31,10 @@ require.config(
 	packages: 
 	[
 		{
-			name: 'rcss',
-			location: 'libs/require-css',
+			name: 'require-css',
+			location: 'bower_components/require-css',
 		    main: 'css',
-		    siteRoot: '../'
+		    siteRoot: '../../'
 		}
 	],
 		
@@ -54,11 +58,6 @@ require.config(
 		{
 			deps : ['jquery', 'underscore'],
 			exports : 'Backbone'
-		},
-		marionette :
-		{
-			deps : ['jquery', 'underscore', 'backbone'],
-			exports : 'Marionette'
 		}
 	},
 	
@@ -70,13 +69,17 @@ require.config(
 
 require(
 [
-	'app'
+	'app',
+	'backbone',
+	'routers/main'
 ], 
 
-
-function(App)
-{	
-	App.init();
-
+function (app, Backbone, Main_Router) 
+{
+	app.routers.main = new Main_Router();
+	app.start();
+	
+	Backbone.history.start({pushState: app.config.use_push_state});
 });
+
 

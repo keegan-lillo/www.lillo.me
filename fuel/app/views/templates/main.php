@@ -15,7 +15,7 @@
 		
 		<!-- =========== CSS =========  -->
 		
-		<?= Asset::css('screen.css') ?>
+		<?= Asset::css('app.css') ?>
 		
 		<!-- =========== Javascript =========  -->
 		
@@ -27,6 +27,16 @@
 					length = methods.length, console = (window.console = window.console || {});
 				while(length--){ method	= methods[length]; if(!console[method]) console[method] = noop;} 
 			}());
+		</script>
+		
+		<script>
+			window.App = 
+			{
+				config : 
+				{
+					base : '<?= Uri::base() ?>'
+				}
+			};
 		</script>
 		
 		<?= Asset::js('bower_components/requirejs/require.js', array(

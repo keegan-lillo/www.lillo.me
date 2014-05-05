@@ -19,6 +19,6 @@
     "commit": "a1e819902e9cd581c026c75e090e4a1ef004c845"
   },
   "_source": "git://github.com/guybedford/require-css.git",
-  "_target": "0.1.2",
+  "_target": "*",
   "_originalSource": "require-css"
 }
