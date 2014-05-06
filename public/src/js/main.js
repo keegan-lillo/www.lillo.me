@@ -1,3 +1,5 @@
+"use strict";
+
 require.config(
 {
 	waitSeconds : 30,
@@ -11,6 +13,8 @@ require.config(
 		'marionette' : 'bower_components/marionette/lib/core/amd/backbone.marionette',
 	    'backbone.wreqr' : 'bower_components/backbone.wreqr/lib/backbone.wreqr',
 	    'backbone.babysitter' : 'bower_components/backbone.babysitter/lib/backbone.babysitter',
+		
+		'foundation' : 'bower_components/foundation/js/foundation',
 		
 		'text' : 'bower_components/requirejs-text/text',
 		'tpl' : 'bower_components/requirejs-tpl-jcbrand/tpl', 
@@ -58,7 +62,13 @@ require.config(
 		{
 			deps : ['jquery', 'underscore'],
 			exports : 'Backbone'
-		}
+		},
+		
+		foundation:
+		{ 
+			deps:['jquery']
+		},
+
 	},
 	
 	catchError : true,

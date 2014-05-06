@@ -16,7 +16,8 @@
 		<!-- =========== CSS =========  -->
 		
 		<?= Asset::css('app.css') ?>
-		
+		<?= Asset::css('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600')?>
+
 		<!-- =========== Javascript =========  -->
 		
 		<script>

@@ -1,0 +1,18 @@
+$color-map:() !default;
+
+$ancestor-prop-selector-prefix : '.route-' !default;
+
+@mixin ancestor-prop($property : color, $val-map : $color-map, $selector-prefix : $ancestor-prop-selector-prefix)
+{
+	
+	@each $selector, $value in $val-map
+	{
+		#{$selector-prefix}#{$selector} &
+		{
+			#{$property} : $value;
+		}
+	}
+	
+}
+
+

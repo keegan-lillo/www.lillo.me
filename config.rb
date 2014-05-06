@@ -10,6 +10,9 @@ javascripts_dir = "public/src/js"
 
 sass_options = {:sourcemap => true} 
 
+disable_warnings = true
+
+
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
 
