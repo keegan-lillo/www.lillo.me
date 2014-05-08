@@ -8,6 +8,8 @@ define(function (require)
 	{
 		template : template,
 		
+		className : 'region-wrap',
+		
 		events : 
 		{
 			'click a[href]' : function(ev)

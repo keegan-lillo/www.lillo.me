@@ -1,0 +1,31 @@
+#main-nav
+{
+	background : $body-background-color;
+	border-bottom : 1px solid $sharp-shadow-color;
+	margin-bottom : rem($med);
+	@include font-size($med);
+	
+	ul
+	{
+		display: table;
+	    margin: 0 auto;
+	    max-width: 300px;
+	    text-align: center;
+	    width: 100%;
+		
+		li
+		{
+   			display: table-cell;
+			position:relative;
+			padding: 0;
+			
+			a
+			{
+				padding: $xxsmall $xxsmall;
+				display : inline-block;
+				width : 100%;
+				@include ancestor-prop(color);
+			}
+		}
+	}
+}

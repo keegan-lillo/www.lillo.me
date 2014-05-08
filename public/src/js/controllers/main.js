@@ -18,9 +18,11 @@ define(function (require) {
 			console.log('init main controller');
 			var Header_View = require('views/header');
 			var Nav_View = require('views/nav');
+			var Gumby = require('gumby');
 			
 			App.main_layout.header.show(new Header_View);
 		 	App.main_layout.nav.show(new Nav_View);
+		 	Gumby.init('fixed');
 		 	
 		 	this._is_init = true;
 		},

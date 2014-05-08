@@ -6,7 +6,8 @@ define(function (require)
 	var header_tpl = require('tpl!templates/partials/header');
 	var logo_tpl = require('text!templates/partials/logo.html');
 	
-	
+	var Gumby = require('gumby');
+	var $ = require('jquery');
 	
 	_class = Marionette.ItemView.extend(
 	{
@@ -18,6 +19,7 @@ define(function (require)
 		{
 			logo : logo_tpl
 		}),
+		
 		
 		
 		events :

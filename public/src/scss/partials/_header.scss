@@ -1,4 +1,22 @@
-svg.logo
+
+#logo
 {
-	@include ancestor-prop(fill);
+	
+	width: 80%;
+	margin: 0px auto;
+
+	svg.logo
+	{
+		@include ancestor-prop(fill);
+	}
+
+}
+
+
+header 
+{
+	.route-index & 
+	{
+		
+	}
 }

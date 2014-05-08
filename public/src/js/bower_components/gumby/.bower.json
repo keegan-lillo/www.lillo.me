@@ -1,0 +1,17 @@
+{
+  "name": "gumby",
+  "main": [
+    "./js/libs/gumby.min.js",
+    "./css/gumby.css"
+  ],
+  "homepage": "https://github.com/keegan-lillo/Gumby",
+  "_release": "7582fe72b3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "feature/modular-scale-v2.x",
+    "commit": "7582fe72b3d821fc8e3ff29c151e25cc5c4a3ac7"
+  },
+  "_source": "git@github.com:keegan-lillo/Gumby.git",
+  "_target": "feature/modular-scale-v2.x",
+  "_originalSource": "git@github.com:keegan-lillo/Gumby.git"
+}

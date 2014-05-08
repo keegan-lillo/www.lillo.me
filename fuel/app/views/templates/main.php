@@ -2,14 +2,33 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		
-		<base href="<?= Uri::base() ?>" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
 		<title>Keegan Lillo</title>
 		<meta name="description" content="" />
-		<meta name="author" content="" />
-		<meta name="viewport" content="width=810" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Keegan Lillo">
+		
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+	
+		<!-- Facebook Metadata /-->
+		<meta property="fb:page_id" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:description" content=""/>
+		<meta property="og:title" content=""/>
+	
+		<!-- Google+ Metadata /-->
+		<meta itemprop="name" content="">
+		<meta itemprop="description" content="">
+		<meta itemprop="image" content="">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		
+		<base href="<?= Uri::base() ?>" />
+		
+		
 		
 		<link rel="shortcut icon" href="<?= Asset::get_file('favicon.ico', 'img') ?>"/>
 		
@@ -39,7 +58,11 @@
 				}
 			};
 		</script>
-		
+		<script 
+			gumby-touch="src/js/libs/jquery.mobile.custom/"
+			gumby-init="false"
+		></script>
+		<?= Asset::js('bower_components/gumby/js/libs/modernizr-2.6.2.min.js') ?>
 		<?= Asset::js('bower_components/requirejs/require.js', array(
 			'data-main' => Asset::find_file($app_config['requirejs_main'], 'js'),
 			'async' => 'async'

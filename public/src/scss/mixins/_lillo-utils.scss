@@ -1,18 +1,79 @@
+// ========= Settings ====================
+
 $color-map:() !default;
 
-$ancestor-prop-selector-prefix : '.route-' !default;
+$ancestor-selector-prefix : '.route-' !default;
 
-@mixin ancestor-prop($property : color, $val-map : $color-map, $selector-prefix : $ancestor-prop-selector-prefix)
+$sharp-shadow-color : #999 !default;
+$sharp-shadow-size : 1px !default;
+$base-font-size : 16px !default;
+
+// ========= Mixins ====================
+
+@mixin ancestor-prop($property : color, $val-map : $val-map, $ancestor-selector-prefix : $ancestor-selector-prefix, $value-override : false)
 {
 	
 	@each $selector, $value in $val-map
 	{
-		#{$selector-prefix}#{$selector} &
+		#{$ancestor-selector-prefix}#{$selector} &
 		{
-			#{$property} : $value;
+			@if($value-override)
+			{
+				#{$property} : $value-override;
+			}
+			@else
+			{
+				#{$property} : $value;
+			}
 		}
 	}
 	
 }
+
+
+@mixin ancestor-selector( $selector-prefix, $val-map : $val-map, $ancestor-selector-prefix : $ancestor-selector-prefix)
+{
+	@each $key, $val in $val-map
+	{
+		#{$ancestor-selector-prefix}#{$key} &#{$selector-prefix}#{$key}
+		{
+			@content;
+		}
+	}
+
+}
+
+
+
+
+// creates a sharp drop shadow where the bottom is twice as wide as the sides
+@mixin sharp-shadow($size : $sharp-shadow-size , $sharp-shadow-color : $sharp-shadow-color)
+{
+	$shadow-1 : $size $size 0px 0px $sharp-shadow-color;
+	$shadow-2 : -$size $size 0px 0px $sharp-shadow-color;
+	$shadow-3 : $size 2 * $size  0px 0px $sharp-shadow-color;
+	$shadow-4 : -$size 2 * $size 0px 0px $sharp-shadow-color;
+	 
+	@include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4)
+}
+
+// extension of gumby row mixin but uses nice ratios for the padding
+@mixin rem-row($row-padding : $row-padding)
+{
+	@include row();
+	padding-left : rem($row-padding);
+	padding-right : rem($row-padding);
+}
+
+// =================== Functions =================
+
+// convert a px unit to rems using the base font size defined in the config
+@function rem($size, $base-font-size : $base-font-size)
+{
+	$size: if(unitless($size), $size, $size / 1px);
+	
+	@return ($size / strip-units($base-font-size)) + rem;
+}
+
 
 

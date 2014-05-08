@@ -1,5 +1,15 @@
 # Require any additional compass plugins here.
-add_import_path "public/src/js/bower_components/foundation/scss"
+add_import_path "public/src/js/bower_components/gumby/sass"
+
+# Tell compass where to find local extensions
+# If you followed directions and ran 'gem install modular-scale' comment the next two lines out:
+extensions_dir = "public/src/js/bower_components/gumby/sass/extensions"
+Compass::Frameworks.register('modular-scale', :path => File.expand_path("#{extensions_dir}/modular-scale"))
+
+# Uncomment these to use regular Ruby gems.
+
+# require 'sassy-math'
+# require 'modular-scale'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
