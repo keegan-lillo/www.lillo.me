@@ -1,4 +1,22 @@
-@keyframes fadein {
-    from {opacity: 0}
+@include keyframes(loader) 
+{
+ 	0% {left:0%; right: 100%}
+    50%{left:0%; right: 0%}
+    100%{left:100%; right: 0%}
+}
+
+@include keyframes(fadein) 
+{
+ 	from {opacity: 0}
     to {opacity: 1}
+}
+
+@include keyframes(slidein) 
+{
+ 	from {
+ 		@include position(relative, null null null 100%);
+ 	}
+    to {
+    	@include position(relative, null null null 0);
+    }
 }

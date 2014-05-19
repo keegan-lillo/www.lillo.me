@@ -6,9 +6,7 @@
 	"private": true,
 
 	"dependencies": 
-	{
-		"gumby" : "git@github.com:keegan-lillo/Gumby.git#feature/modular-scale-v2.x",
-	
+	{	
 		"requirejs": "2.x",
 		"marionette": "1.x",
 		"require-css" : "",

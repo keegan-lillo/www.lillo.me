@@ -8,21 +8,19 @@ define(function (require) {
 	{
 		_is_init : false,
 
-		_init: function(options)
+		_init: function(route)
 		{
 			if(this._is_init)
 			{
 				return;
 			}
 			
-			console.log('init main controller');
+			console.log('init main controller', route);
 			var Header_View = require('views/header');
 			var Nav_View = require('views/nav');
-			var Gumby = require('gumby');
 			
 			App.main_layout.header.show(new Header_View);
 		 	App.main_layout.nav.show(new Nav_View);
-		 	Gumby.init('fixed');
 		 	
 		 	this._is_init = true;
 		},
@@ -34,7 +32,7 @@ define(function (require) {
 
 		'index' : function()
 		{
-			this._init();
+			this._init('index');
 			
 			var Home_View = require('views/home');
 		 	App.main_layout.main.show(new Home_View);
@@ -45,7 +43,7 @@ define(function (require) {
 		{
 			console.log('path - who/' + path);
 			
-			this._init();
+			this._init('who');
 			
 			var Who_View = require('views/who');
 		 	App.main_layout.main.show(new Who_View);

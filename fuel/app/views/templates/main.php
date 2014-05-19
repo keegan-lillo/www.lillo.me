@@ -23,7 +23,7 @@
 		<meta itemprop="description" content="">
 		<meta itemprop="image" content="">
 	
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		
 		<base href="<?= Uri::base() ?>" />
@@ -36,7 +36,6 @@
 		
 		<?= Asset::css('app.css') ?>
 		<?= Asset::css('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600')?>
-
 		<!-- =========== Javascript =========  -->
 		
 		<script>
@@ -58,11 +57,7 @@
 				}
 			};
 		</script>
-		<script 
-			gumby-touch="src/js/libs/jquery.mobile.custom/"
-			gumby-init="false"
-		></script>
-		<?= Asset::js('bower_components/gumby/js/libs/modernizr-2.6.2.min.js') ?>
+		
 		<?= Asset::js('bower_components/requirejs/require.js', array(
 			'data-main' => Asset::find_file($app_config['requirejs_main'], 'js'),
 			'async' => 'async'

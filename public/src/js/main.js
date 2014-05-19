@@ -15,13 +15,11 @@ require.config(
 		'marionette' : 'bower_components/marionette/lib/core/amd/backbone.marionette',
 	    'backbone.wreqr' : 'bower_components/backbone.wreqr/lib/backbone.wreqr',
 	    'backbone.babysitter' : 'bower_components/backbone.babysitter/lib/backbone.babysitter',
-		
-		'gumby' : 'bower_components/gumby/js/libs/gumby.min',
-		
+			
 		'text' : 'bower_components/requirejs-text/text',
 		'tpl' : 'bower_components/requirejs-tpl-jcbrand/tpl', 
 		'css' : '../css',
-		'templates' : '../templates',
+		'templates' : 'templates',
 				
 	},
 	
@@ -65,12 +63,6 @@ require.config(
 			deps : ['jquery', 'underscore'],
 			exports : 'Backbone'
 		},
-		
-		gumby:
-		{ 
-			deps: ['jquery'],
-			exports : 'Gumby'
-		},
 
 	},
 	
@@ -85,11 +77,10 @@ require(
 	'app',
 	'backbone',
 	'routers/main',
-	'gumby',
 	'jquery.mobile'
 ], 
 
-function (app, Backbone, Main_Router, datgumby) 
+function (app, Backbone, Main_Router) 
 {
 	app.routers.main = new Main_Router();
 	app.start();
