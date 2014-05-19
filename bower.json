@@ -5,15 +5,12 @@
 	"repository": "git@github.com:keegan-lillo/www.lillo.me.git",
 	"private": true,
 
-	"dependencies": {
-		"foundation": "zurb/bower-foundation",
-	
+	"dependencies": 
+	{	
 		"requirejs": "2.x",
 		"marionette": "1.x",
 		"require-css" : "",
 		"requirejs-tpl-jcbrand" : "",
 			"requirejs-text" : "2.x"
 	}
- 
-	
-} 
+}

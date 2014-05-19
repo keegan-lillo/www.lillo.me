@@ -1,0 +1,16 @@
+@mixin ms-font-size($scale : 0, $use-rem : true)
+{
+	$val1 : modular-scale($ms-base-1 $ms-base-2, $scale , $ms-ratio);
+	$val2 : modular-scale($ms-base-1 $ms-base-2, $scale + 1 , $ms-ratio);
+	
+	@if($use-rem is true)
+	{
+		font-size : rem($val1);
+		line-height : rem($val2);
+	}
+	@else
+	{
+		font-size : $val1;
+		line-height : $val2;
+	}
+}

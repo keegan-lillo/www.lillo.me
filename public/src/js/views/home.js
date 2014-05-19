@@ -6,8 +6,8 @@ define(function (require)
 	
 	_class = Marionette.ItemView.extend(
 	{
-		template : template
-		
+		template : template,
+		className : 'region-wrap'
 	});
 	
 	return _class;

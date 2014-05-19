@@ -1,0 +1,32 @@
+@import '../libs/neat/neat-helpers';
+
+$column: $rms3 ; // Column width
+$gutter: $rms-2 ; // Gutter between each two columns
+$grid-columns: 12 ; // Total number of columns in the grid
+$max-width: rem(modular-scale($ms-base-1 $ms-base-2, 17, $ms-ratio)) ; // Max-width of the outer container
+$border-box-sizing: true ; // Makes all elements have a border-box layout
+$default-feature: min-width; // Default @media feature for the breakpoint() mixin
+$default-layout-direction: LTR ;
+
+$visual-grid: false ; // Display the base grid
+$visual-grid-color: #E6F6FF ;
+$visual-grid-index: front; // Show grid behind content (back) or overlay it over the content (front)
+// $visual-grid-opacity: 0.4 !default;
+// $visual-grid-breakpoints: () !default;
+
+// ============= Breakpoints ================
+
+$portrait : orientation portrait; //	Phone-sizes devices in portrait mode
+$landscape : orientation landscape; // Phone-sizes devices in landscape mode
+
+$break-small : 680px ;
+$break-medium : 1200px ;
+$break-large : 1900px ;
+
+$cols-small : 8;
+$cols-medium : 12 ;
+$cols-large : 12;
+
+$media-small : new-breakpoint(max-width $break-small $cols-small); //	All phone sizes
+$media-medium : new-breakpoint(min-width $break-small + 1 max-width $break-large $cols-medium); //	All phone sizes
+$media-large : new-breakpoint(min-width $break-large + 1 $cols-large); //	All phone sizes

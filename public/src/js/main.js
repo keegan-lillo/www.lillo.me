@@ -7,19 +7,19 @@ require.config(
 	paths :
 	{
 		'jquery' : 'bower_components/jquery/dist/jquery',
+		'jquery.mobile' : 'libs/jquery.mobile.custom/jquery.mobile.custom',
+		
 		'underscore' : 'bower_components/underscore/underscore',
 		'backbone' : 'bower_components/backbone/backbone',
 
 		'marionette' : 'bower_components/marionette/lib/core/amd/backbone.marionette',
 	    'backbone.wreqr' : 'bower_components/backbone.wreqr/lib/backbone.wreqr',
 	    'backbone.babysitter' : 'bower_components/backbone.babysitter/lib/backbone.babysitter',
-		
-		'foundation' : 'bower_components/foundation/js/foundation',
-		
+			
 		'text' : 'bower_components/requirejs-text/text',
 		'tpl' : 'bower_components/requirejs-tpl-jcbrand/tpl', 
 		'css' : '../css',
-		'templates' : '../templates',
+		'templates' : 'templates',
 				
 	},
 	
@@ -63,11 +63,6 @@ require.config(
 			deps : ['jquery', 'underscore'],
 			exports : 'Backbone'
 		},
-		
-		foundation:
-		{ 
-			deps:['jquery']
-		},
 
 	},
 	
@@ -81,7 +76,8 @@ require(
 [
 	'app',
 	'backbone',
-	'routers/main'
+	'routers/main',
+	'jquery.mobile'
 ], 
 
 function (app, Backbone, Main_Router) 

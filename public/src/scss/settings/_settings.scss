@@ -1,0 +1,96 @@
+
+$ms-ratio : 1.618; // golden ratio
+$ms-base-1 : 17px; // make sure to set $em-base too
+$ms-base-2 : 21.624px; 
+
+$ms-4: modular-scale($ms-base-1 $ms-base-2, -4, $ms-ratio);
+$ms-3: modular-scale($ms-base-1 $ms-base-2, -3, $ms-ratio);
+$ms-2: modular-scale($ms-base-1 $ms-base-2, -2, $ms-ratio);
+$ms-1: modular-scale($ms-base-1 $ms-base-2, -1, $ms-ratio);
+$ms0:  modular-scale($ms-base-1 $ms-base-2, 0 , $ms-ratio);
+$ms1:  modular-scale($ms-base-1 $ms-base-2, 1 , $ms-ratio);
+$ms2:  modular-scale($ms-base-1 $ms-base-2, 2 , $ms-ratio);
+$ms3:  modular-scale($ms-base-1 $ms-base-2, 3 , $ms-ratio);
+$ms4:  modular-scale($ms-base-1 $ms-base-2, 4 , $ms-ratio); 
+$ms5:  modular-scale($ms-base-1 $ms-base-2, 5 , $ms-ratio);
+$ms6:  modular-scale($ms-base-1 $ms-base-2, 6 , $ms-ratio);
+$ms7:  modular-scale($ms-base-1 $ms-base-2, 7 , $ms-ratio); 
+$ms8:  modular-scale($ms-base-1 $ms-base-2, 8 , $ms-ratio);
+$ms9:  modular-scale($ms-base-1 $ms-base-2, 9 , $ms-ratio);
+$ms10: modular-scale($ms-base-1 $ms-base-2, 10, $ms-ratio);
+$ms11: modular-scale($ms-base-1 $ms-base-2, 11, $ms-ratio);
+$ms12: modular-scale($ms-base-1 $ms-base-2, 12, $ms-ratio);
+$ms13: modular-scale($ms-base-1 $ms-base-2, 13, $ms-ratio);
+$ms14: modular-scale($ms-base-1 $ms-base-2, 14, $ms-ratio);
+
+$rms-4: rem(modular-scale($ms-base-1 $ms-base-2, -4, $ms-ratio));
+$rms-3: rem(modular-scale($ms-base-1 $ms-base-2, -3, $ms-ratio));
+$rms-2: rem(modular-scale($ms-base-1 $ms-base-2, -2, $ms-ratio));
+$rms-1: rem(modular-scale($ms-base-1 $ms-base-2, -1, $ms-ratio));
+$rms0:  rem(modular-scale($ms-base-1 $ms-base-2, 0 , $ms-ratio));
+$rms1:  rem(modular-scale($ms-base-1 $ms-base-2, 1 , $ms-ratio));
+$rms2:  rem(modular-scale($ms-base-1 $ms-base-2, 2 , $ms-ratio));
+$rms3:  rem(modular-scale($ms-base-1 $ms-base-2, 3 , $ms-ratio));
+$rms4:  rem(modular-scale($ms-base-1 $ms-base-2, 4 , $ms-ratio)); 
+$rms5:  rem(modular-scale($ms-base-1 $ms-base-2, 5 , $ms-ratio));
+$rms6:  rem(modular-scale($ms-base-1 $ms-base-2, 6 , $ms-ratio));
+$rms7:  rem(modular-scale($ms-base-1 $ms-base-2, 7 , $ms-ratio)); 
+$rms8:  rem(modular-scale($ms-base-1 $ms-base-2, 8 , $ms-ratio));
+$rms9:  rem(modular-scale($ms-base-1 $ms-base-2, 9 , $ms-ratio));
+$rms10: rem(modular-scale($ms-base-1 $ms-base-2, 10, $ms-ratio));
+$rms11: rem(modular-scale($ms-base-1 $ms-base-2, 11, $ms-ratio));
+$rms12: rem(modular-scale($ms-base-1 $ms-base-2, 12, $ms-ratio));
+$rms13: rem(modular-scale($ms-base-1 $ms-base-2, 13, $ms-ratio));
+$rms14: rem(modular-scale($ms-base-1 $ms-base-2, 14, $ms-ratio));
+
+
+@debug ms-4 $ms-4;
+@debug ms-3 $ms-3;
+@debug ms-2 $ms-2;
+@debug ms-1 $ms-1;
+@debug ms0  $ms0; 
+@debug ms1  $ms1; 
+@debug ms2  $ms2; 
+@debug ms3  $ms3; 
+@debug ms4  $ms4; 
+@debug ms5  $ms5; 
+@debug ms6  $ms6; 
+@debug ms7  $ms7; 
+@debug ms8  $ms8; 
+@debug ms9  $ms9; 
+@debug ms10 $ms10; 
+@debug ms11 $ms11; 
+@debug ms12 $ms12; 
+@debug ms13 $ms13;
+@debug ms14 $ms14; 
+
+
+// Typography
+$font-family:  'Source Sans Pro', $lucida-grande;
+$base-font-size : $ms0;
+$base-line-height : $ms2;
+
+// // Vertical Rhythm Spacing
+// $base-line-height: $ms1;
+// $rhythm-spacing: .168;
+// $rhythm-height: .711;
+
+
+// User Interface Colors
+$global-bg-color: #EDEDED;
+$navbar-color: #F7F7F7;
+$border-color: #ddd;
+ 
+$color-map: (	
+	index : #3F9FE0,	
+	who: #3F9FE0, 	
+	what: #F0AD4E, 	
+	where: #880000
+);
+
+
+$body-background-color : #F7F7F7;
+$page-background-color : #EDEDED;
+// $row-spacing :$large;
+
+

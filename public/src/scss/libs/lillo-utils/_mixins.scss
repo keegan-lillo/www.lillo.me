@@ -1,0 +1,51 @@
+
+@mixin ancestor-prop($val-map , $property : color, $ancestor-selector-prefix : $ancestor-selector-prefix, $value-override : false)
+{
+	
+	@each $selector, $value in $val-map
+	{
+		#{$ancestor-selector-prefix}#{$selector} &
+		{
+			@if($value-override)
+			{
+				#{$property} : $value-override;
+			}
+			@else
+			{
+				#{$property} : $value;
+			}
+		}
+	}
+	
+}
+
+
+@mixin ancestor-selector( $val-map, $selector-prefix , $ancestor-selector-prefix : $ancestor-selector-prefix)
+{
+	@each $key, $val in $val-map
+	{
+		#{$ancestor-selector-prefix}#{$key} &#{$selector-prefix}#{$key}
+		{
+			$ancestor-selector-current-val : $val !global;
+			@content;
+		}
+	}
+
+}
+
+
+
+
+// creates a sharp drop shadow where the bottom is twice as wide as the sides
+@mixin sharp-shadow($size : $sharp-shadow-size , $sharp-shadow-color : $sharp-shadow-color)
+{
+	$shadow-1 : $size $size 0px 0px $sharp-shadow-color;
+	$shadow-2 : -$size $size 0px 0px $sharp-shadow-color;
+	$shadow-3 : $size 2 * $size  0px 0px $sharp-shadow-color;
+	$shadow-4 : -$size 2 * $size 0px 0px $sharp-shadow-color;
+	 
+	box-shadow : $shadow-1, $shadow-2, $shadow-3, $shadow-4;
+}
+
+
+
