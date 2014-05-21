@@ -1,0 +1,27 @@
+<section class="portfolio-item">
+	<div class="content">
+		<h2><%= name %></h2>
+		<%= project_description %>
+		
+		<% if(my_comments) { %>
+			<aside class="my_comments">
+				<h3>My Comments</h3>
+				<%= my_comments %>
+			</aside>
+		<% } %>
+		
+		<h3>My Responsibilities</h3>
+		<ul class="list responsibilities">
+			<% _.each(responsibilities, function(item) { %>
+				<li><%= item %></li>
+			<% }) %>
+		</ul>
+		
+		<h3>Technology Used</h3>
+		<ul class="list technology">
+			<% _.each(technology, function(item) { %>
+				<li><%= item %></li>
+			<% }) %>
+		</ul>
+	</div>
+</section>

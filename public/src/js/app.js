@@ -15,6 +15,8 @@ define(function(require)
 	app.config = Config;
 	app.routers = {};
 	
+	app.models = {};
+	
 	app.main_layout = new Main_Layout();
 	
 	app.addInitializer(function(options)

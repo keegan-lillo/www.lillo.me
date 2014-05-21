@@ -18,6 +18,10 @@
 			"JQuery",
 			"AWS",
 			"MYSQL"
+		],
+		"images" : [
+			"analytics_1.jpg",
+			"analytics_2.jpg"
 		]
 	},
 	{
@@ -39,6 +43,9 @@
 			"JQuery",
 			"AWS",
 			"MYSQL"
+		],
+		"images" : [
+			"realtime_1.png"
 		]
 	},
 	{
@@ -65,7 +72,7 @@
 		]
 	},
 	{
-		"name": "Luxury Automotive Ultimate Fans Competition",
+		"name": "Mercedes-Benz Ultimate Fans Competition",
 		"project_description" : "<p>A competition run to coincide with the 2014 Australia Formula 1 Grand Prix. The Facebook application utilized a combination of user input and automated algorithms to give prospective entrants a score that represents their worthiness of entering the competition. The application took advantage of the Facebook Javascript API to perform dozens of asynchronous API requests. The resulting data was then combined to formulate the final score and generate a unique, sharable graphic for the user.</p>",
 		"my_comments" : "<p>This project was one of my favorites. There were many moving parts to the application so bringing it all together was challenging, but highly rewarding. Being lead on this project meant that I was able to ensure the infrastructure and presentation layer worked harmoniously. One example of this is that there was not a single Facebook API call made by our server infrastructure. Everything was performed client side. This resulted in a highly available and scalable final product.</p>",
 		"responsibilities": [
@@ -84,11 +91,14 @@
 			"requireJS",
 			"AWS",
 			"MYSQL"
+		],
+		"images" : [
+			"ultimate_fan.jpg"
 		]
 	},
 	{
-		"name": "Dog Treat Video Contest (Video Encoder)",
-		"project_description" : "<p>As part of a video submission competition, I was tasked with creating a process that would encode and watermark the entrant's videos before being displayed in a gallery. As the videos needed to be vetted by humans to ensure appropriate content, encode time was not a large factor. However cost effectiveness was very important. I architected a solution that utilized low cost AWS EC2 Spot instances that would only encode the videos while costs were low.</p>",
+		"name": "Chewbies Video Contest (Video Encoder)",
+		"project_description" : "<p>As part of a video submission competition, I was tasked with creating a process that would encode and watermark the entrant's videos before being displayed in a gallery. As the videos needed to be vetted by humans to ensure appropriate content, encode time was not a large factor. However cost effectiveness was very important. I architected a solution that utilized low cost AWS EC2 Spot instances that would encode the videos automatically and on-demand.</p>",
 		"my_comments" : "",
 		"responsibilities": [
 			"PHP Development",
@@ -100,6 +110,9 @@
 			"JQuery",
 			"AWS",
 			"ffmpeg"
+		],
+		"images" : [
+			"chewbies-video-encoder.svg"
 		]
 	},
 	{
@@ -117,12 +130,16 @@
 			"Social Media APIs",
 			"MYSQL",
 			"AWS"
+		],
+		"images" : [
+			"good-friday-qppeal_1.jpg",
+			"good-friday-qppeal_2.jpg"
 		]
 	},
 	{
-		"name": "Department Store Perfect Gift Match-Maker",
-		"project_description" : "<p>A microsite to promote the range of christmas specials for a major Australian department store. The application helped users find gifts for their friends by providing recommendations based on their Facebook friend's likes.</p>",
-		"my_comments" : "",
+		"name": "Target Perfect Gift Match-Maker",
+		"project_description" : "<p>A microsite to promote the range of christmas specials for Target Australian. The application helped users find gifts for their friends by providing recommendations based on their Facebook friend's likes.</p>",
+		"my_comments" : "<p>This project was unique in that it would require a large burst of traffic over the days leading up to christmas. In order to ensure high availability, I architected a solution that would store incoming user data to SQS instead of directly to the RDS. This meant our EC2 instances could scale out without having to worry about overwhelming the RDS. A separate EC2 instance would then consume the SQS queue and store the data to an RDS instance at a predictable and steady rate.</p>",
 		"responsibilities": [
 			"Infrastructure Management",
 			"PHP Development",
@@ -133,12 +150,15 @@
 			"Facebook Page App",
 			"Social Media APIs",
 			"MYSQL"
+		],
+		"images" : [
+			"matchmaker_1.jpg"
 		]
 	},
 	{
-		"name": "Crowd Sourced R&amp;D Project",
-		"project_description" : "<p>An interactive survey built for a major snack foods brand where a limited number of users received a free box of cookies to test and provide feedback on the package design. The brand was looking to deviate from the traditional focus group method of market research and instead take advantage of crowd sourcing. Through the application, the brand received feedback from users via traditional survey forms as well as uploaded videos and photos of their experience. The end results were very positive. The brand was able to gain valuable insight about their product at an overall significantly lower cost.</p>",
-		"my_comments" : "<p>This project was very satisfying to work on. The campaign was a huge success. We initially had budget to promote the application via paid means such as Facebook advertising. However the application gained so much attention organically, it reached its user cap in a matter of hours and the paid advertising was not necessary.</p>",
+		"name": "Kraft Foods Crowd Sourced R&amp;D",
+		"project_description" : "<p>An interactive survey built for Kraft Foods (Mondelēz International) where a limited number of users received a free box of cookies to test and provide feedback on the package design. Kraft Foods were looking to deviate from the traditional focus group method of market research and instead take advantage of crowd sourcing. Through the application, Kraft Foods received feedback from users via traditional survey forms as well as uploaded videos and photos of their experience. The end results were very positive. The brand was able to gain valuable insight about their product at an overall significantly lower cost.</p>",
+		"my_comments" : "<p>This project was very satisfying to work on. The campaign was a huge success. We initially had budget to promote the application via paid means such as Facebook advertising, however the application gained so much attention organically, it reached its user cap in a matter of hours and the paid seeding was not necessary.</p>",
 		"responsibilities": [
 			"PHP Development",
 			"Lead Developer"
@@ -147,11 +167,15 @@
 			"Facebook Page App",
 			"Social Media APIs",
 			"MYSQL"
+		],
+		"images" : [
+			"delicious_world_lab_1.png"
 		]
+		
 	},
 	{
-		"name": "CMajor Chocolate Brand Taste Festival iPad Web App",
-		"project_description" : "<p>Web app that was installed on a series of iPads at the taste festival in Tasmania. The application itself was a simple competition entry form, however the application was responsible for increasing the brand's mailing list by over 30% in the space of a weekend.</p>",
+		"name": "Cadbury Kitchen Taste Festival iPad Web App",
+		"project_description" : "<p>A web app that was installed on a series of iPads at the Taste Festival in Tasmania. The application itself was a simple competition entry form, however the application was responsible for increasing the brand's mailing list by over 30% in the space of a weekend.</p>",
 		"my_comments" : "",
 		"responsibilities": [
 			"Design",
@@ -164,6 +188,9 @@
 			"iPad Web App",
 			"JQuery",
 			"MYSQL"
+		],
+		"images" : [
+			"cadbury_kitchen_1.png"
 		]
 	}
 ]
