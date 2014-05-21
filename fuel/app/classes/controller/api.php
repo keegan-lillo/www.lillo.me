@@ -4,6 +4,9 @@
  * @package  app
  * @extends  Controller
  */
+ 
+ use \Model\Portfolio;
+ 
 class Controller_Api extends Controller_Rest
 {
 		
@@ -18,8 +21,10 @@ class Controller_Api extends Controller_Rest
 	
 	public function get_portfolio()
 	{
+		$portfolio = new Portfolio();
+		$data = $portfolio->get_items();
 		
-		$this->response($data, 200);
+		$this->response($data, 200); 
 	}
 
-}
+} 

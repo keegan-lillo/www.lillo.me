@@ -5,7 +5,7 @@ define(function(require)
 	// ---------- dependencies --------
 	var Marionette = require('marionette');
 	var Config = require('config/app');
-	var Main_Layout = require('layouts/main');
+	var Primary_Layout = require('layouts/primary');
 	var $ = require('jquery');
 	
 	var app = new Marionette.Application();
@@ -13,17 +13,18 @@ define(function(require)
 	// ---------- Boostrap --------
 	
 	app.config = Config;
+	
 	app.routers = {};
+	app.collections = {};
+	app.layouts = {};
 	
-	app.models = {};
-	
-	app.main_layout = new Main_Layout();
+	app.layouts.primary = new Primary_Layout();
 	
 	app.addInitializer(function(options)
 	{
 		console.log('init app');
 		
-		this.main_layout.render(); 
+		this.layouts.primary.render(); 
 		this.routers.main.on('route', function(route)
 		{
 			$("body")

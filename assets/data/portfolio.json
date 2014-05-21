@@ -1,5 +1,6 @@
 [
 	{
+		"id" : 1,
 		"name": "Social Pulse Analytics",
 		"link" : "http://socialpulse.co/social-pulse-analytics",
 		"project_description" : "<p>Social media analytics platform that allows brands to track their performance across a range of platforms including Facebook, YouTube, Twitter and Instagram. Brands are able to compare their audience, reach, frequency and impact against both their competitors and industry.</p><p>Social Pulse&trade; is currently being used by large brands from a wide range of industries including, automotive, department stores, snack foods, pets, grocery and television.</p>",
@@ -25,6 +26,7 @@
 		]
 	},
 	{
+		"id" : 2,
 		"name": "Social Pulse Realtime",
 		"link" : "http://socialpulse.co/social-pulse-realtime",
 		"project_description" : "<p>Social media monitoring platform that provides a streamlined and customized interface for handing user generated content on a brand's Facebook page. Social Pulse&trade; Publishing provides a means for brands to triage user page interactions to a customized internal process that ensures no voice goes unheard.</p><p>Social Pulse&trade; is currently being used by large brands from a wide range of industries including, automotive, department stores, snack foods, pets, grocery and television.</p>",
@@ -49,6 +51,7 @@
 		]
 	},
 	{
+		"id" : 3,
 		"name": "Social Pulse Publishing",
 		"link" : "http://socialpulse.co/social-pulse-publishing",
 		"project_description" : "<p>Social media publishing platform that allows brands to manage the publishing and approval process of content. The software guides brands through their own customized publishing process. Starting from idea generation to approvals, to scheduling, and finally finishing at automated publishing of content.</p><p>Social Pulse&trade; is currently being used by large brands from a wide range of industries including, automotive, department stores, snack foods, pets, groceries and television.</p>",
@@ -72,6 +75,7 @@
 		]
 	},
 	{
+		"id" : 4,
 		"name": "Mercedes-Benz Ultimate Fans Competition",
 		"project_description" : "<p>A competition run to coincide with the 2014 Australia Formula 1 Grand Prix. The Facebook application utilized a combination of user input and automated algorithms to give prospective entrants a score that represents their worthiness of entering the competition. The application took advantage of the Facebook Javascript API to perform dozens of asynchronous API requests. The resulting data was then combined to formulate the final score and generate a unique, sharable graphic for the user.</p>",
 		"my_comments" : "<p>This project was one of my favorites. There were many moving parts to the application so bringing it all together was challenging, but highly rewarding. Being lead on this project meant that I was able to ensure the infrastructure and presentation layer worked harmoniously. One example of this is that there was not a single Facebook API call made by our server infrastructure. Everything was performed client side. This resulted in a highly available and scalable final product.</p>",
@@ -97,6 +101,7 @@
 		]
 	},
 	{
+		"id" : 5,
 		"name": "Chewbies Video Contest (Video Encoder)",
 		"project_description" : "<p>As part of a video submission competition, I was tasked with creating a process that would encode and watermark the entrant's videos before being displayed in a gallery. As the videos needed to be vetted by humans to ensure appropriate content, encode time was not a large factor. However cost effectiveness was very important. I architected a solution that utilized low cost AWS EC2 Spot instances that would encode the videos automatically and on-demand.</p>",
 		"my_comments" : "",
@@ -116,6 +121,7 @@
 		]
 	},
 	{
+		"id" : 6,
 		"name": "Good Friday Appeal Facebook Application",
 		"project_description" : "<p>A Facebook application that allowed users to donate to the cause directly from within a Facebook brand page. The application was unique in that it also allowed unaffiliated page owners to install the application on their own Facebook page. Page owners would then compete with each other on how much money they raised.</p>",
 		"my_comments" : "",
@@ -137,6 +143,7 @@
 		]
 	},
 	{
+		"id" : 7,
 		"name": "Target Perfect Gift Match-Maker",
 		"project_description" : "<p>A microsite to promote the range of christmas specials for Target Australian. The application helped users find gifts for their friends by providing recommendations based on their Facebook friend's likes.</p>",
 		"my_comments" : "<p>This project was unique in that it would require a large burst of traffic over the days leading up to christmas. In order to ensure high availability, I architected a solution that would store incoming user data to SQS instead of directly to the RDS. This meant our EC2 instances could scale out without having to worry about overwhelming the RDS. A separate EC2 instance would then consume the SQS queue and store the data to an RDS instance at a predictable and steady rate.</p>",
@@ -156,6 +163,7 @@
 		]
 	},
 	{
+		"id" : 8,
 		"name": "Kraft Foods Crowd Sourced R&amp;D",
 		"project_description" : "<p>An interactive survey built for Kraft Foods (Mondelēz International) where a limited number of users received a free box of cookies to test and provide feedback on the package design. Kraft Foods were looking to deviate from the traditional focus group method of market research and instead take advantage of crowd sourcing. Through the application, Kraft Foods received feedback from users via traditional survey forms as well as uploaded videos and photos of their experience. The end results were very positive. The brand was able to gain valuable insight about their product at an overall significantly lower cost.</p>",
 		"my_comments" : "<p>This project was very satisfying to work on. The campaign was a huge success. We initially had budget to promote the application via paid means such as Facebook advertising, however the application gained so much attention organically, it reached its user cap in a matter of hours and the paid seeding was not necessary.</p>",
@@ -174,6 +182,7 @@
 		
 	},
 	{
+		"id" : 9,
 		"name": "Cadbury Kitchen Taste Festival iPad Web App",
 		"project_description" : "<p>A web app that was installed on a series of iPads at the Taste Festival in Tasmania. The application itself was a simple competition entry form, however the application was responsible for increasing the brand's mailing list by over 30% in the space of a weekend.</p>",
 		"my_comments" : "",

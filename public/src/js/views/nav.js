@@ -14,6 +14,8 @@ define(function (require)
 		{
 			'click a[href]' : function(ev)
 			{
+				ev.preventDefault();
+				
 				App.routers.main.navigate($(ev.currentTarget).attr('href'), {trigger : true});
 				
 				return false;
