@@ -62,6 +62,11 @@ define(function (require) {
 		'where' : function(path) 
 		{
 			console.log('path - where/' + path);
+			
+			this._init('where');
+			
+			var Where_View = require('views/where');
+			App.layouts.primary.main.show(new Where_View);
 		}
 	};
 	
