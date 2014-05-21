@@ -1,0 +1,56 @@
+.portfolio-container
+{
+	@include display(flex);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	
+	.image-holder img
+	{
+		@include sharp-shadow();
+		
+		display : block;
+	}
+	
+	.responsibilities, .technology
+	{
+		// @include span-columns(2);
+	}
+	
+	.expanded-content
+	{
+		display : none;
+	}
+	
+	.expand-btn
+	{
+		&.closed:before
+		{
+			
+			@include triangle($rms2, map-get($color-map, 'what'), 'down');
+			
+			content : " ";
+			display: block;
+			margin: 0 auto;
+		}
+		
+		&.open:before
+		{
+			@include triangle($rms2, map-get($color-map, 'what'), 'up');
+			
+			content : " ";
+			display: block;
+			margin: 0 auto;
+		}
+		
+		padding-top: $rms1;
+		display: block;		
+		@include position(absolute, null $rms-1 $rms1 $rms-1 );
+	}
+	
+	.portfolio-item .content
+	{ 
+		#main-main & {padding-bottom : $rms2 + $rms1}
+	}
+}
+
+

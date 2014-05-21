@@ -21,8 +21,8 @@
 			"MYSQL"
 		],
 		"images" : [
-			"analytics_1.jpg",
-			"analytics_2.jpg"
+			{ "full" : "analytics_1.jpg", "thumb" : "analytics_1.jpg" },
+			{ "full" : "analytics_2.jpg", "thumb" : "analytics_2.jpg" }
 		]
 	},
 	{
@@ -47,7 +47,7 @@
 			"MYSQL"
 		],
 		"images" : [
-			"realtime_1.png"
+			{ "full" : "realtime_1.png", "thumb" : "realtime_1.jpg" }
 		]
 	},
 	{
@@ -72,6 +72,10 @@
 			"requireJS",
 			"AWS",
 			"MYSQL"
+		],
+		"images" : [
+			{ "full" : "publishing_1.jpg", "thumb" : "publishing_1.jpg" },
+			{ "full" : "publishing_2.jpg", "thumb" : "publishing_2.jpg" }
 		]
 	},
 	{
@@ -97,7 +101,7 @@
 			"MYSQL"
 		],
 		"images" : [
-			"ultimate_fan.jpg"
+			{ "full" : "ultimate_fan.jpg", "thumb" : "ultimate_fan.jpg" }
 		]
 	},
 	{
@@ -117,7 +121,7 @@
 			"ffmpeg"
 		],
 		"images" : [
-			"chewbies-video-encoder.svg"
+			{ "full" : "chewbies-video-encoder.svg", "thumb" : "chewbies-video-encoder.svg" }
 		]
 	},
 	{
@@ -138,8 +142,9 @@
 			"AWS"
 		],
 		"images" : [
-			"good-friday-qppeal_1.jpg",
-			"good-friday-qppeal_2.jpg"
+			{ "full" : "good-friday-appeal_1.jpg", "thumb" : "good-friday-appeal_1.jpg" },
+			{ "full" : "good-friday-appeal_2.jpg", "thumb" : "good-friday-appeal_2.jpg" }
+
 		]
 	},
 	{
@@ -159,7 +164,7 @@
 			"MYSQL"
 		],
 		"images" : [
-			"matchmaker_1.jpg"
+			{ "full" : "matchmaker_1.jpg", "thumb" : "matchmaker_1.jpg" }
 		]
 	},
 	{
@@ -177,7 +182,7 @@
 			"MYSQL"
 		],
 		"images" : [
-			"delicious_world_lab_1.png"
+			{ "full" : "delicious_world_lab_1.png", "thumb" : "delicious_world_lab_1.jpg" }
 		]
 		
 	},
@@ -199,7 +204,7 @@
 			"MYSQL"
 		],
 		"images" : [
-			"cadbury_kitchen_1.png"
+			{ "full" : "cadbury_kitchen_1.png", "thumb" : "cadbury_kitchen_1.jpg" }
 		]
 	}
 ]

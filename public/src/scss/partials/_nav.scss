@@ -7,7 +7,7 @@
 	ul
 	{
 		@include outer-container();
-		padding-left: 0;
+		padding: 0;
 	    text-align: center; 
 		
 		li
@@ -68,7 +68,7 @@
 				display : inline-block;
 				width : 100%;
 				@include ancestor-prop($color-map, color);
-
+				outline : none;
 				&:hover
 				{
 					text-decoration: none;

@@ -7,15 +7,35 @@ define(function (require)
 	
 	var Item_Template = require('tpl!templates/items/portfolio-item');	
 	
+	
 	_class = Marionette.ItemView.extend(
 	{
 		template : Item_Template,
 		className : 'portfolio-item',
 		tagName : 'section',	
-			
-		initialize : function()	{},
 		
-		onRender : function() {},
+		events : 
+		{
+			'click .expand-btn' : function(ev)
+			{
+				ev.preventDefault();
+				
+				this.$('.expanded-content').slideToggle();
+				$(ev.currentTarget).toggleClass('open closed');
+				
+				return false;
+			}
+		},
+		
+		initialize : function()	
+		{
+			// console.log(this);
+		},
+		
+		onRender : function() 
+		{
+			
+		},
 		
 	});
 	

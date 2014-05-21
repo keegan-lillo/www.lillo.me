@@ -68,7 +68,7 @@ $rms14: rem(modular-scale($ms-base-1 $ms-base-2, 14, $ms-ratio));
 // Typography
 $font-family:  'Source Sans Pro', $lucida-grande;
 $base-font-size : $ms0;
-$base-line-height : $ms2;
+$base-line-height : $rms2;
 
 // // Vertical Rhythm Spacing
 // $base-line-height: $ms1;
@@ -82,15 +82,17 @@ $navbar-color: #F7F7F7;
 $border-color: #ddd;
  
 $color-map: (	
-	index : #3F9FE0,	
-	who: #3F9FE0, 	
-	what: #F0AD4E, 	
-	where: #880000
+	index : #4F4F4F,	
+	who: #2AA316, 	
+	what: #3F9FE0, 	// 0EB6CC
+	where: #DD482E
 );
 
 
 $body-background-color : #F7F7F7;
 $page-background-color : #EDEDED;
+
+$text-color : #4F4F4F;
 // $row-spacing :$large;
 
 
