@@ -5,9 +5,7 @@ define(function (require)
 
 	var App = require('app');
 	
-	var Page_Template = require('tpl!templates/pages/what');
-	
-	var Portfolio_Collection = require('collections/portfolio');
+	var Page_Template = require('tpl!templates/pages/what');	
 	var Portfolio_ItemView = require('views/portfolio-item');
 	
 	
@@ -19,19 +17,17 @@ define(function (require)
 		
 		itemViewContainer : '.portfolio-container',
 		itemView : Portfolio_ItemView,
-		
-		collection : new Portfolio_Collection(),
-		
+				
 		initialize : function()
 		{
-			this.collection.fetch();
+			
 		},
+		
 		
 		onRender : function()
 		{
-			
 			// this.collection.fetch();
-			console.log('collection', this.collection);
+			// console.log('collection', this.collection);
 		},
 		
 	});

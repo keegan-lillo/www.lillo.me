@@ -11,10 +11,17 @@ class Portfolio extends \Model
 		$this->_app_config = \Config::get('app');
 	}
 	
-    public function get_items()
+    public function get_items($id = null)
     {
     	$data = file_get_contents($this->_app_config['portfolio_data_dir']);
-		$data = json_decode($data);
+		$data = json_decode($data, TRUE);
+		
+		if($id)
+		{
+			$data = \Arr::filter($data, 'id', $id);
+			$data = $data[0];
+		}
+		
 		return $data;
     }
 

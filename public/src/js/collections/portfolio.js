@@ -11,6 +11,6 @@ define(function (require)
 		model : Portfolio_Model
 		
 	});
-	
-	return _class;
+	console.log('portfolio col called');
+	return new _class();
 });

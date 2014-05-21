@@ -105,7 +105,10 @@ a
 	
 	&:hover
 	{
-		text-decoration: underline;
+		text-decoration: none;
+		
+		@include ancestor-prop($color-map, color);
+		
 	}
 }
 
@@ -150,7 +153,7 @@ a
 				background : $body-background-color;
 				padding : $rms-1 $rms-1 $rms1; 
 				
-				> :first-child
+				:first-child
 				{
 					padding-top: 0;
 					margin-top : 0;

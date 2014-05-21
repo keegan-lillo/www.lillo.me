@@ -2,7 +2,9 @@
 
 define(function (require) {
 	
+	var $ = require('jquery');
 	var App = require('app');
+	var Loader_View = require('views/loader');
 	
 	var _class = 
 	{
@@ -39,30 +41,57 @@ define(function (require) {
 			
 		},
 		
-		'who' : function(path) 
-		{
-			console.log('path - who/' + path);
-			
+		'who' : function() 
+		{			
 			this._init('who');
 			
 			var Who_View = require('views/who');
 		 	App.layouts.primary.main.show(new Who_View);
 		},
 		
-		'what' : function(path) 
-		{
-			console.log('path - what/' + path);
-			
+		'what' : function(id) 
+		{			
 			this._init('what');
 			
-			var What_View = require('views/what');
-			App.layouts.primary.main.show(new What_View);
+			if(id)
+			{
+				var Portfolio_Model = require('models/portfolio-item');
+				var portfolio_item = new Portfolio_Model({'id' : id});
+				
+				App.layouts.primary.main.show(new Loader_View);
+				
+				portfolio_item.fetch()
+					.done(function()
+					{
+						var What_Expanded_View = require('views/what-expanded');
+						App.layouts.primary.main.show(new What_Expanded_View(
+						{
+							model : portfolio_item
+						}));
+					});
+				
+			}
+			else
+			{
+				var Portfolio_Collection = require('collections/portfolio');
+				
+				App.layouts.primary.main.show(new Loader_View);
+				
+				Portfolio_Collection.fetch()
+					.done(function()
+					{
+						var What_View = require('views/what');
+						App.layouts.primary.main.show(new What_View(
+						{
+							collection : Portfolio_Collection
+						}));
+					});
+			}
+			
 		},
 		
-		'where' : function(path) 
-		{
-			console.log('path - where/' + path);
-			
+		'where' : function() 
+		{			
 			this._init('where');
 			
 			var Where_View = require('views/where');

@@ -1,47 +1,9 @@
 <div class="content">
-	<h3><%= name %></h3>
-	<p class="image-holder">
-		<img src="<%= images[0].thumb %>" alt="<%= name %>" />
-	</p>
-	
-	
-	
-	<div class="expanded-content closed">
+	<a href="what/<%= id %>">
+		<h3><%= name %></h3>
 		<p class="image-holder">
-			
-			<% for (var i = 1; i < images.length; i++) { %>
-	 			<img src="<%= images[i].thumb %>" alt="<%= name %>" />
-			<% } %>
-			
-			
+			<img src="<%= images[0].thumb %>" alt="<%= name %>" />
 		</p>
-		<%= project_description %>
-	
-		<% if(my_comments) { %>
-			<aside class="my_comments">
-				<h4>My Comments</h4>
-				<%= my_comments %>
-			</aside>
-		<% } %>
-		
-		<div class="responsibilities">
-			<h4>My Responsibilities</h4>
-			<ul class="list">
-				<% _.each(responsibilities, function(item) { %>
-					<li><%= item %></li>
-				<% }) %>
-			</ul>
-		</div>
-		<div class="technology">
-			<h4>Technology Used</h4>
-			<ul class="list">
-				<% _.each(technology, function(item) { %>
-					<li><%= item %></li>
-				<% }) %>
-			</ul>
-		</div>
-	</div>
-	
-	<a class="expand-btn closed" title="expand"></a>
-	
+	</a>
 </div>
+ 

@@ -10,9 +10,9 @@ define(function (require)
 		appRoutes: 
 		{
 			'' : 'index',
-			'who(/*path)' : 'who',
-			'what(/*path)' : 'what', 
-			'where(/*path)' : 'where', 
+			'who(/)' : 'who',
+			'what(/:id)' : 'what', 
+			'where(/)' : 'where', 
 		},
 		
 		controller : Main_Controller

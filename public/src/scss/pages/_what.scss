@@ -46,11 +46,6 @@
 		display: block;		
 		@include position(absolute, null $rms-1 $rms1 $rms-1 );
 	}
-	
-	.portfolio-item .content
-	{ 
-		#main-main & {padding-bottom : $rms2 + $rms1}
-	}
 }
 
 

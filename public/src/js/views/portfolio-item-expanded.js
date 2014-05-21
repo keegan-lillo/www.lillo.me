@@ -5,7 +5,7 @@ define(function (require)
 	
 	var App = require('app');
 	
-	var Item_Template = require('tpl!templates/items/portfolio-item');	
+	var Item_Template = require('tpl!templates/items/portfolio-item-expanded');	
 	
 	
 	_class = Marionette.ItemView.extend(
@@ -16,18 +16,20 @@ define(function (require)
 		
 		events : 
 		{
-			'click a' : function(ev)
+			'click .expand-btn' : function(ev)
 			{
-				// @TODO adjust to navigate action
 				ev.preventDefault();
 				
-				App.routers.main.navigate($(ev.currentTarget).attr('href'), {trigger : true});
+				this.$('.expanded-content').slideToggle();
+				$(ev.currentTarget).toggleClass('open closed');
+				
 				return false;
 			}
 		},
 		
 		initialize : function()	
 		{
+			this.model = 
 			// console.log(this);
 		},
 		

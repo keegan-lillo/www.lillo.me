@@ -9,6 +9,8 @@ define(function (require)
 	
 	_class = Backbone.Model.extend(
 	{
+		urlRoot: App.config.api_endpoint + 'portfolio/',
+		
 		parse : function(response, options) 
 		{
 			_.each(response.images, function(item, index, list)
