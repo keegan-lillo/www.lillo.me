@@ -14,6 +14,28 @@ define(function(require)
 			header : '#main-header',
 			nav : '#main-nav',
 			main : '#main-main'
+		},
+		
+		scroll_to : function (region) 
+		{
+			var target_top = this[region].$el.offset().top;
+			var $html_body = $('html, body');
+
+			if($html_body.scrollTop() > target_top)
+			{
+				$html_body.animate({ scrollTop: target_top}, 'fast');
+			}
+			
+		},
+		
+		show_loader : function () 
+		{
+			this.$('#main-loader').removeClass('hide');
+		},
+		
+		hide_loader : function () 
+		{
+			this.$('#main-loader').addClass('hide');
 		}
 	}); 
 

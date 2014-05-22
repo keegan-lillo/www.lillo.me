@@ -64,7 +64,7 @@
 		, 'js')) ?>
 		
 	</head>
-	<body id="body" class="wrapper">
+	<body id="body" class="wrapper route-index">
 		<div class="main" id="page" >
 			 <?= $content; ?>
 		</div>

@@ -47,6 +47,7 @@ define(function (require) {
 			
 			var Who_View = require('views/who');
 		 	App.layouts.primary.main.show(new Who_View);
+		 	App.layouts.primary.scroll_to('nav');
 		},
 		
 		'what' : function(id) 
@@ -54,30 +55,31 @@ define(function (require) {
 			this._init('what');
 			
 			var Portfolio_Collection = require('collections/portfolio');
-			
+			App.layouts.primary.show_loader();
 			
 			if(id)
 			{
 				var Portfolio_Model = require('models/portfolio-item');
 				var portfolio_item = Portfolio_Collection.get(id) || new Portfolio_Model({'id' : id});
-				
-				// @TODO talk to a new loader region here
-				
+								
 				portfolio_item.fetch({lazy : true})
 					.done(function()
 					{
+						
+						
 						var What_Expanded_View = require('views/what-expanded');
 						App.layouts.primary.main.show(new What_Expanded_View(
 						{
 							model : portfolio_item
 						}));
+						
+						App.layouts.primary.hide_loader();
+						App.layouts.primary.scroll_to('nav');
 					});
 				
 			}
 			else
 			{
-							
-				// @TODO talk to a new loader region here
 				Portfolio_Collection.fetch({lazy : true})
 					.done(function()
 					{
@@ -86,6 +88,9 @@ define(function (require) {
 						{
 							collection : Portfolio_Collection
 						}));
+						
+						App.layouts.primary.hide_loader();
+						// App.layouts.primary.scroll_to('nav');
 					});
 			}
 			
@@ -97,6 +102,7 @@ define(function (require) {
 			
 			var Where_View = require('views/where');
 			App.layouts.primary.main.show(new Where_View);
+			App.layouts.primary.scroll_to('nav');
 		}
 	};
 	

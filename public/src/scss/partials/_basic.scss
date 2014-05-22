@@ -13,14 +13,14 @@ html, body
 	color: $text-color;
 }
 
-h1
-{
-	font-size: $rms4;
-	line-height: $rms5;
-	font-weight: 400;
-	margin-top: $rms1;
-}
-h2
+// h1
+// {
+	// font-size: $rms4;
+	// line-height: $rms5;
+	// font-weight: 400;
+	// margin-top: $rms1;
+// }
+h1, h2
 {
 	font-size: $rms3;
 	line-height: $rms4;
@@ -78,13 +78,19 @@ a
 	cursor : pointer;
 }
 
+.hide
+{
+	display:none;
+}
+
 #main-loader
 {
-	position:absolute;
+	position:fixed;
 	top:0;
-	height: 5px;
-	background-color : map-get($color-map, index);
+	height: 5px;	
+	z-index: 9999;
 	
+	@include ancestor-prop($color-map, background-color);
 	@include animation(loader 2s ease-in-out infinite)
 }
 
