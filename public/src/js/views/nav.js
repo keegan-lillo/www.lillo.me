@@ -30,19 +30,20 @@ define(function (require)
 		onRender : function () 
 		{
 			var $nav_el = this.$el;
-			var $nav_el_list = $nav_el.find('ul.nav');
+			var $nav_el_list = $nav_el.find('.nav');
 			var $nav_el_placeholder = $nav_el.find('.fixed-placeholder');
+			var nav_height = $nav_el_list.outerHeight();
 			
-			this.lazy_scroll =  function (ev) 
+			this.lazy_scroll = function (ev) 
 			{
 				if ($(window).scrollTop() > $nav_el.offset().top) 
 				{
 		            $nav_el_list.addClass("fixed");
 		            $nav_el_placeholder.height($nav_el_list.outerHeight());
 		        } 
-		        else 
+		        else if($nav_el_list.hasClass("fixed"))
 		        {
-		        	App.layouts.primary.nav.$el.find('ul.nav').removeClass("fixed");
+		        	$nav_el_list.removeClass("fixed");
 		        	$nav_el_placeholder.height(0);
 		        }
 			};

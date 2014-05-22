@@ -1,18 +1,17 @@
 <h1><%= name %></h1>
 
 <div class="portfolio-container">
-	<section>
-		<div class="content">
-			<% _.each(images, function(item){ %>
-				<p class="image-holder">
-					<a href="<%= item.full %>" target="_blank">
+	<% _.each(images, function(item){ %>
+		<section>
+			<div class="content">
+			
+				<a href="<%= item.full %>" target="_blank">
 			 			<img src="<%= item.thumb %>" alt="<%= name %>" />
 			 		</a>
-				</p>
-			<% }) %>
 		</div>
 	</section>	
-			
+	<% }) %>
+		
 	<section>
 		<div class="content">
 			<h4>About The Project</h4>

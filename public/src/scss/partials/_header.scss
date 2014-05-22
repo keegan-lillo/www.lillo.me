@@ -5,8 +5,8 @@
 		text-align: center;
 		vertical-align: middle;
 		margin: 0 auto;
-		max-width: $rms13;
-		padding: $rms0;
+		max-width: $rms14;
+		padding: $rms2;
 	}
 }
 
@@ -19,7 +19,7 @@
 	// margin: 0px auto;
 	// height: $rms10;
 	// padding : $rms0;
-	// cursor: pointer;
+	cursor: pointer;
 	
 	display: inline-block;
 	position: relative;
@@ -33,13 +33,12 @@
 	{
 		@include ancestor-prop($color-map, fill);
 		
-		// height: 100%;
-		// width: 100%;
+		height: 100%;
+		width: 100%;
 		display: block;
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%; /* only required for <img /> */
 	}
 
 }

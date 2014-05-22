@@ -23,7 +23,8 @@ define(function(require)
 
 			if($html_body.scrollTop() > target_top)
 			{
-				$html_body.animate({ scrollTop: target_top}, 'fast');
+				$html_body.scrollTop(target_top);
+				// $html_body.animate({ scrollTop: target_top}, 'fast');
 			}
 			
 		},

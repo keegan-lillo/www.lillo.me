@@ -135,6 +135,7 @@ a
 			@include media($media-small)
 			{
 				@include span-columns($cols-small of $cols-small);
+				@include omega(1n);
 			}
 			
 			@include media($media-medium)

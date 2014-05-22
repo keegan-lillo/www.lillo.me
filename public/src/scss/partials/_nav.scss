@@ -2,43 +2,50 @@
 {
 	.region-wrap
 	{
-		padding-top: $rms-2;
+		padding-top: 0;
 		position : relative;
 		z-index: 100;
 	}
 	
-	
-	ul
+	.nav
 	{
 		background : $body-background-color;
 		border-bottom : 1px solid $sharp-shadow-color;
 		@include ms-font-size(1);
+		@include fill-parent();
+		
+		&.fixed
+		{
+			position : fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 100; 
+			box-shadow :0px 0px 10px 3px #999;
+			
+			// &:after
+			// {
+				// content : " ";
+				// display:block;
+				// position : absolute;
+				// bottom: 100%;
+				// left: 0;
+				// right: 0;
+				// height: $rms-2;
+				// background: $page-background-color;
+			// }
+		}
+	}
+	
+	ul
+	{
+		
 	
 		@include outer-container();
 		padding: 0;
 	    text-align: center; 
 		
-		&.fixed
-		{
-			position : fixed;
-			top: $rms-2;
-			left: 0;
-			right: 0;
-			z-index: 100;
-			box-shadow :0px 0px 10px 3px #999;
-			
-			&:after
-			{
-				content : " ";
-				display:block;
-				position : absolute;
-				bottom: 100%;
-				left: 0;
-				right: 0;
-				height: $rms-2;
-				background: $page-background-color;
-			}
-		}
+		
 		
 		li
 		{
@@ -71,7 +78,11 @@
 			
 			@include media($media-large)
 			{
-				@include span-columns($cols-large / 6);
+				@include span-columns(2);
+				&:first-child
+				{
+					@include shift(3);
+				}
 				
 			}
 			

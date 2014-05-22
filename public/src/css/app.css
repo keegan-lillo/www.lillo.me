@@ -274,7 +274,11 @@ a {
           margin-right: 2.14454%;
           width: 100%; }
           #main-main .region-wrap section:last-child {
-            margin-right: 0; } }
+            margin-right: 0; }
+          #main-main .region-wrap section:nth-child(1n) {
+            margin-right: 0; }
+          #main-main .region-wrap section:nth-child(1n+1) {
+            clear: left; } }
       @media screen and (min-width: 681px) and (max-width: 1055px) {
         #main-main .region-wrap section {
           float: left;
@@ -315,10 +319,11 @@ a {
   text-align: center;
   vertical-align: middle;
   margin: 0 auto;
-  max-width: 21.55434rem;
-  padding: 0.94444rem; }
+  max-width: 27.41739rem;
+  padding: 1.52811rem; }
 
 #logo {
+  cursor: pointer;
   display: inline-block;
   position: relative;
   width: 100%;
@@ -326,12 +331,12 @@ a {
   vertical-align: middle;
   /* top | middle | bottom ... do what you want */ }
   #logo svg.logo {
+    height: 100%;
+    width: 100%;
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    /* only required for <img /> */ }
+    left: 0; }
     .route-index #logo svg.logo {
       fill: #4f4f4f; }
     .route-who #logo svg.logo {
@@ -349,14 +354,23 @@ a {
   margin-bottom: 2.5rem; }
 
 #main-nav .region-wrap {
-  padding-top: 0.58371rem;
+  padding-top: 0;
   position: relative;
   z-index: 100; }
-#main-nav ul {
+#main-nav .nav {
   background: #f7f7f7;
   border-bottom: 1px solid #dddddd;
   font-size: 1.20133rem;
   line-height: 1.52811rem;
+  width: 100%; }
+  #main-nav .nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0px 0px 10px 3px #999; }
+#main-nav ul {
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
@@ -366,22 +380,6 @@ a {
     content: "";
     display: table;
     clear: both; }
-  #main-nav ul.fixed {
-    position: fixed;
-    top: 0.58371rem;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    box-shadow: 0px 0px 10px 3px #999; }
-    #main-nav ul.fixed:after {
-      content: " ";
-      display: block;
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      right: 0;
-      height: 0.58371rem;
-      background: #ededed; }
   #main-nav ul li {
     position: relative;
     top: 1px;
@@ -417,7 +415,9 @@ a {
         margin-right: 1.96232%;
         width: 15.0314%; }
         #main-nav ul li:last-child {
-          margin-right: 0; } }
+          margin-right: 0; }
+        #main-nav ul li:first-child {
+          margin-left: 25.49058%; } }
     .route-index #main-nav ul li.nav__item--index {
       border-bottom-color: #4f4f4f; }
     .route-who #main-nav ul li.nav__item--who {
