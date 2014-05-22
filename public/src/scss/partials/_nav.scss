@@ -1,11 +1,13 @@
 #main-nav
 {
-	background : $body-background-color;
-	border-bottom : 1px solid $sharp-shadow-color;
-	@include ms-font-size(1); 
+	 
 	
 	ul
 	{
+		background : $body-background-color;
+		border-bottom : 1px solid $sharp-shadow-color;
+		@include ms-font-size(1);
+	
 		@include outer-container();
 		padding: 0;
 	    text-align: center; 
@@ -21,7 +23,7 @@
 			
 			@include media($media-small)
 			{
-				@include span-columns(2);
+				@include span-columns(3);
 				
 				&:first-child
 				{
@@ -52,7 +54,7 @@
 			
 			
 			// ------- active selectors -------------------
-			border-bottom-width : 2px;
+			border-bottom-width : 3px;
 			border-bottom-style : solid;
 			border-bottom-color : transparent;
 			

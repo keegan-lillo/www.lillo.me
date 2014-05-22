@@ -237,7 +237,8 @@ a {
 
 a {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
   a:hover {
     text-decoration: none; }
     .route-index a:hover {
@@ -252,7 +253,7 @@ a {
 #main-main {
   margin: 1.20133rem 0.58371rem; }
   #main-main .region-wrap {
-    max-width: 56.42761rem;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto; }
     #main-main .region-wrap:after {
@@ -265,11 +266,11 @@ a {
         #main-main .region-wrap section {
           float: left;
           display: block;
-          margin-right: 2.97265%;
+          margin-right: 2.14454%;
           width: 100%; }
           #main-main .region-wrap section:last-child {
             margin-right: 0; } }
-      @media screen and (min-width: 681px) and (max-width: 1900px) {
+      @media screen and (min-width: 681px) and (max-width: 1055px) {
         #main-main .region-wrap section {
           float: left;
           display: block;
@@ -281,7 +282,7 @@ a {
             margin-right: 0; }
           #main-main .region-wrap section:nth-child(2n+1) {
             clear: left; } }
-      @media screen and (min-width: 1901px) {
+      @media screen and (min-width: 1056px) {
         #main-main .region-wrap section {
           float: left;
           display: block;
@@ -305,15 +306,27 @@ a {
       #main-main .region-wrap section img {
         max-width: 100%; }
 
+#main-header .region-wrap {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  max-width: 21.55434rem;
+  padding: 0.94444rem; }
+
 #logo {
+  display: inline-block;
+  position: relative;
   width: 100%;
-  margin: 0px auto;
-  height: 10.47295rem;
-  padding: 0.94444rem;
-  cursor: pointer; }
+  padding-bottom: 33%;
+  vertical-align: middle;
+  /* top | middle | bottom ... do what you want */ }
   #logo svg.logo {
-    height: 100%;
-    width: 100%; }
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* only required for <img /> */ }
     .route-index #logo svg.logo {
       fill: #4f4f4f; }
     .route-who #logo svg.logo {
@@ -330,81 +343,80 @@ a {
   left: 0;
   margin-bottom: 2.5rem; }
 
-#main-nav {
+#main-nav ul {
   background: #f7f7f7;
   border-bottom: 1px solid #dddddd;
   font-size: 1.20133rem;
-  line-height: 1.52811rem; }
-  #main-nav ul {
-    max-width: 56.42761rem;
-    margin-left: auto;
-    margin-right: auto;
+  line-height: 1.52811rem;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  text-align: center; }
+  #main-nav ul:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #main-nav ul li {
+    position: relative;
+    top: 1px;
     padding: 0;
-    text-align: center; }
-    #main-nav ul:after {
-      content: "";
-      display: table;
-      clear: both; }
-    #main-nav ul li {
-      position: relative;
-      top: 1px;
-      padding: 0;
-      border-bottom-width: 2px;
-      border-bottom-style: solid;
-      border-bottom-color: transparent; }
-      @media screen and (max-width: 680px) {
-        #main-nav ul li {
-          float: left;
-          display: block;
-          margin-right: 2.97265%;
-          width: 22.77051%; }
-          #main-nav ul li:last-child {
-            margin-right: 0; }
-          #main-nav ul li:first-child {
-            margin-left: 12.87158%; } }
-      @media screen and (min-width: 681px) and (max-width: 1900px) {
-        #main-nav ul li {
-          float: left;
-          display: block;
-          margin-right: 1.96232%;
-          width: 15.0314%;
-          margin-left: 8.49686%; }
-          #main-nav ul li:last-child {
-            margin-right: 0; }
-          #main-nav ul li:first-child {
-            margin-left: 16.99372%; } }
-      @media screen and (min-width: 1901px) {
-        #main-nav ul li {
-          float: left;
-          display: block;
-          margin-right: 1.96232%;
-          width: 15.0314%; }
-          #main-nav ul li:last-child {
-            margin-right: 0; } }
-      .route-index #main-nav ul li.nav__item--index {
-        border-bottom-color: #4f4f4f; }
-      .route-who #main-nav ul li.nav__item--who {
-        border-bottom-color: #2aa316; }
-      .route-what #main-nav ul li.nav__item--what {
-        border-bottom-color: #3f9fe0; }
-      .route-where #main-nav ul li.nav__item--where {
-        border-bottom-color: #dd482e; }
-      #main-nav ul li a {
-        padding: 0.45889rem 0.74248rem;
-        display: inline-block;
-        width: 100%;
-        outline: none; }
-        .route-index #main-nav ul li a {
-          color: #4f4f4f; }
-        .route-who #main-nav ul li a {
-          color: #2aa316; }
-        .route-what #main-nav ul li a {
-          color: #3f9fe0; }
-        .route-where #main-nav ul li a {
-          color: #dd482e; }
-        #main-nav ul li a:hover {
-          text-decoration: none;
-          border-bottom-width: 1px; }
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent; }
+    @media screen and (max-width: 680px) {
+      #main-nav ul li {
+        float: left;
+        display: block;
+        margin-right: 2.14454%;
+        width: 25.71306%; }
+        #main-nav ul li:last-child {
+          margin-right: 0; }
+        #main-nav ul li:first-child {
+          margin-left: 9.28587%; } }
+    @media screen and (min-width: 681px) and (max-width: 1055px) {
+      #main-nav ul li {
+        float: left;
+        display: block;
+        margin-right: 1.96232%;
+        width: 15.0314%;
+        margin-left: 8.49686%; }
+        #main-nav ul li:last-child {
+          margin-right: 0; }
+        #main-nav ul li:first-child {
+          margin-left: 16.99372%; } }
+    @media screen and (min-width: 1056px) {
+      #main-nav ul li {
+        float: left;
+        display: block;
+        margin-right: 1.96232%;
+        width: 15.0314%; }
+        #main-nav ul li:last-child {
+          margin-right: 0; } }
+    .route-index #main-nav ul li.nav__item--index {
+      border-bottom-color: #4f4f4f; }
+    .route-who #main-nav ul li.nav__item--who {
+      border-bottom-color: #2aa316; }
+    .route-what #main-nav ul li.nav__item--what {
+      border-bottom-color: #3f9fe0; }
+    .route-where #main-nav ul li.nav__item--where {
+      border-bottom-color: #dd482e; }
+    #main-nav ul li a {
+      padding: 0.45889rem 0.74248rem;
+      display: inline-block;
+      width: 100%;
+      outline: none; }
+      .route-index #main-nav ul li a {
+        color: #4f4f4f; }
+      .route-who #main-nav ul li a {
+        color: #2aa316; }
+      .route-what #main-nav ul li a {
+        color: #3f9fe0; }
+      .route-where #main-nav ul li a {
+        color: #dd482e; }
+      #main-nav ul li a:hover {
+        text-decoration: none;
+        border-bottom-width: 1px; }
 
 .route-index #main-nav {
   position: absolute;

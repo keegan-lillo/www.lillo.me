@@ -1,19 +1,45 @@
+#main-header
+{
+	.region-wrap
+	{
+		text-align: center;
+		vertical-align: middle;
+		margin: 0 auto;
+		max-width: $rms13;
+		padding: $rms0;
+	}
+}
+
+
 
 #logo
 {
 	
+	// width: 100%;
+	// margin: 0px auto;
+	// height: $rms10;
+	// padding : $rms0;
+	// cursor: pointer;
+	
+	display: inline-block;
+	position: relative;
 	width: 100%;
-	margin: 0px auto;
-	height: $rms10;
-	padding : $rms0;
-	cursor: pointer;
+	padding-bottom: 33%; 
+	 
+	vertical-align: middle; /* top | middle | bottom ... do what you want */
+	
 	
 	svg.logo
 	{
 		@include ancestor-prop($color-map, fill);
 		
-		height: 100%;
-		width: 100%;
+		// height: 100%;
+		// width: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%; /* only required for <img /> */
 	}
 
 }

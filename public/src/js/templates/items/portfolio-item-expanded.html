@@ -5,7 +5,9 @@
 		<div class="content">
 			<% _.each(images, function(item){ %>
 				<p class="image-holder">
-			 		<img src="<%= item.thumb %>" alt="<%= name %>" />
+					<a href="<%= item.full %>">
+			 			<img src="<%= item.thumb %>" alt="<%= name %>" />
+			 		</a>
 				</p>
 			<% }) %>
 		</div>
