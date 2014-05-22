@@ -4,7 +4,7 @@ define(function (require) {
 	
 	var $ = require('jquery');
 	var App = require('app');
-	var Loader_View = require('views/loader');
+	// var Loader_View = require('views/loader');
 	
 	var _class = 
 	{
@@ -53,14 +53,17 @@ define(function (require) {
 		{			
 			this._init('what');
 			
+			var Portfolio_Collection = require('collections/portfolio');
+			
+			
 			if(id)
 			{
 				var Portfolio_Model = require('models/portfolio-item');
-				var portfolio_item = new Portfolio_Model({'id' : id});
+				var portfolio_item = Portfolio_Collection.get(id) || new Portfolio_Model({'id' : id});
 				
-				App.layouts.primary.main.show(new Loader_View);
+				// @TODO talk to a new loader region here
 				
-				portfolio_item.fetch()
+				portfolio_item.fetch({lazy : true})
 					.done(function()
 					{
 						var What_Expanded_View = require('views/what-expanded');
@@ -73,11 +76,9 @@ define(function (require) {
 			}
 			else
 			{
-				var Portfolio_Collection = require('collections/portfolio');
-				
-				App.layouts.primary.main.show(new Loader_View);
-				
-				Portfolio_Collection.fetch()
+							
+				// @TODO talk to a new loader region here
+				Portfolio_Collection.fetch({lazy : true})
 					.done(function()
 					{
 						var What_View = require('views/what');

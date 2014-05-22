@@ -1,13 +1,12 @@
 define(function (require)
 {
-	var Backbone = require('backbone');
 	var $ = require('jquery');
 	
 	var App = require('app');
 	
-	var Item_Template = require('tpl!templates/items/portfolio-item');	
+	var LilloModel = require('classes/lillo-model');	
 	
-	_class = Backbone.Model.extend(
+	_class = LilloModel.extend(
 	{
 		urlRoot: App.config.api_endpoint + 'portfolio/',
 		
