@@ -19,11 +19,10 @@ define(function(require)
 		scroll_to : function (region) 
 		{
 			var target_top = this[region].$el.offset().top;
-			var $html_body = $('html, body');
 
-			if($html_body.scrollTop() > target_top)
+			if($(window).scrollTop() > target_top)
 			{
-				$html_body.scrollTop(target_top);
+				$('html, body').scrollTop(target_top);
 				// $html_body.animate({ scrollTop: target_top}, 'fast');
 			}
 			

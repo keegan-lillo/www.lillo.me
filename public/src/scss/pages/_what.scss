@@ -1,8 +1,12 @@
 .portfolio-container
 {
-	@include display(flex);
-	@include flex-direction(row);
-	@include flex-wrap(wrap);
+	@inlude media($media-medium-up)
+	{
+		@include display(flex);
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+	}
+	
 	
 	.image-holder img
 	{
