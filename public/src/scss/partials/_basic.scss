@@ -91,7 +91,7 @@ a
 	z-index: 9999;
 	
 	@include ancestor-prop($color-map, background-color);
-	@include animation(loader 2s ease-in-out infinite)
+	@include animation(loader 2s ease-in-out infinite);
 }
 
 #page 

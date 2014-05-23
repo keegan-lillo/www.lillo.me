@@ -23,19 +23,18 @@ define(function(require)
 			if($(window).scrollTop() > target_top)
 			{
 				$('html, body').scrollTop(target_top);
-				// $html_body.animate({ scrollTop: target_top}, 'fast');
 			}
 			
 		},
 		
 		show_loader : function () 
 		{
-			this.$('#main-loader').removeClass('hide');
+			this.$('#main-loader').fadeIn(250);
 		},
 		
 		hide_loader : function () 
 		{
-			this.$('#main-loader').addClass('hide');
+			this.$('#main-loader').delay(500).fadeOut(500);
 		}
 	}); 
 

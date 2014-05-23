@@ -35,19 +35,21 @@ define(function (require) {
 		'index' : function()
 		{
 			this._init('index');
-			
+			App.layouts.primary.show_loader();
 			var Home_View = require('views/home');
 		 	App.layouts.primary.main.show(new Home_View);
+		 	App.layouts.primary.hide_loader();
 			
 		},
 		
 		'who' : function() 
 		{			
 			this._init('who');
-			
+			App.layouts.primary.show_loader();
 			var Who_View = require('views/who');
 		 	App.layouts.primary.main.show(new Who_View);
 		 	App.layouts.primary.scroll_to('nav');
+		 	App.layouts.primary.hide_loader();
 		},
 		
 		'what' : function(id) 
@@ -65,8 +67,6 @@ define(function (require) {
 				portfolio_item.fetch({lazy : true})
 					.done(function()
 					{
-						
-						
 						var What_Expanded_View = require('views/what-expanded');
 						App.layouts.primary.main.show(new What_Expanded_View(
 						{
@@ -99,10 +99,11 @@ define(function (require) {
 		'where' : function() 
 		{			
 			this._init('where');
-			
+			App.layouts.primary.show_loader();
 			var Where_View = require('views/where');
 			App.layouts.primary.main.show(new Where_View);
 			App.layouts.primary.scroll_to('nav');
+			App.layouts.primary.hide_loader();
 		}
 	};
 	
