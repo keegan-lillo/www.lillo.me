@@ -3,7 +3,7 @@ define(function(require)
 	
 	var Config  =
 	{
-		use_push_state : false,
+		use_push_state : true,
 		
 		api_endpoint : 'api/',
 		
