@@ -1,13 +1,17 @@
 .portfolio-container
 {
-	@inlude media($media-medium-up)
+	@include media($media-medium-up)
+	{
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include display(flex);
+	}
+	
+	section
 	{
 		
 	}
 	
-	@include display(flex);
-		@include flex-direction(row);
-		@include flex-wrap(wrap);
 	.image-holder img
 	{
 		@include sharp-shadow();

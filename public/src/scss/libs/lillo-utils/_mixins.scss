@@ -33,7 +33,16 @@
 
 }
 
+@mixin map-loop( $val-map)
+{
+	@each $key, $val in $val-map
+	{
+		$map-loop-current-key : $key !global;
+		$map-loop-current-val : $val !global;
+		@content;
+	}
 
+}
 
 
 // creates a sharp drop shadow where the bottom is twice as wide as the sides
