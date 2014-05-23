@@ -28,7 +28,7 @@ $cols-medium : 12 ;
 $cols-large : 12;
 
 $media-small : new-breakpoint(max-width $break-small $cols-small); 
-$media-medium : new-breakpoint(min-width $break-small + 1 max-width $break-medium $cols-medium); 
-$media-large : new-breakpoint(min-width $break-medium + 1 $cols-large); 
-$media-medium-up : new-breakpoint(min-width $break-small + 1); 
-$media-large-up : new-breakpoint(min-width $break-medium + 1); 
+$media-medium : new-breakpoint(min-width $break-small max-width $break-medium $cols-medium); 
+$media-large : new-breakpoint(min-width $break-medium $cols-large); 
+$media-medium-up : new-breakpoint(min-width $break-small ); 
+$media-large-up : new-breakpoint(min-width $break-medium ); 

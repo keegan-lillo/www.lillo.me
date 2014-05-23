@@ -63,6 +63,17 @@ h6
 	font-weight: 400;
 }
 
+h1,h2,h3,h4,h5,h6
+{
+	em
+	{
+		font-weight: 300;
+		margin-left : 1 / $ms-ratio * 1em;
+		display: inline-block;
+		font-style : normal;
+	}
+}
+
 p
 {
 	padding-top: $rms-3;
@@ -81,14 +92,39 @@ pre
 	white-space: pre-wrap;
 }
 
-a
+small
 {
-	cursor : pointer;
+	font-size : 1 / $ms-ratio * 1em;
 }
 
+a
+{
+	color : inherit;
+	text-decoration : none;
+	outline : none;
+	cursor : pointer;
+	
+	&:hover
+	{
+		text-decoration: none;
+		
+		@include ancestor-prop($color-map, color);
+		
+	}
+}
 .hide
 {
 	display:none;
+}
+
+.clear 
+{
+	 @include clearfix;
+}
+.section-head
+{
+	// @include span-columns(1 of 1);
+	// @include omega(1n);
 }
 
 #main-loader
@@ -112,20 +148,7 @@ a
 	animation : fadein 1s;
 }
 
-a
-{
-	color : inherit;
-	text-decoration : none;
-	outline : none;
-	
-	&:hover
-	{
-		text-decoration: none;
-		
-		@include ancestor-prop($color-map, color);
-		
-	}
-}
+
 
 
 

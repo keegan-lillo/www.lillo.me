@@ -1,0 +1,39 @@
+.route-who
+{
+	.group
+	{
+		@include clearfix;
+		
+		@include media($media-medium-up)
+		{
+			@include flex-direction(row);
+			@include flex-wrap(wrap);
+			@include display(flex);
+		}
+		
+		
+		
+		
+	}
+	
+	@include media($media-large)
+	{
+		
+		.section-head
+		{
+			@include shift(1);
+		}
+		
+		#main-main .group section
+		{	
+		
+			&:first-child
+			{
+				@include shift(1);
+			}
+			
+			@include span-columns(5);
+			@include omega(2n);
+		}
+	}
+}
