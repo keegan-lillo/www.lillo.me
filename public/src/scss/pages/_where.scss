@@ -1,0 +1,97 @@
+.route-where
+{
+	@include media($media-medium)
+	{
+		.group
+		{
+			@include shift(2);
+			@include span-columns(8);
+		}
+		
+		#main-main section
+		{
+			@include span-columns(8 of 8);
+			@include omega(1n);
+		}
+	}
+	
+	
+	@include media($media-large)
+	{
+		
+		
+		.group
+		{
+			@include span-columns(5);
+			
+			&:first-child
+			{
+				@include shift(1);
+			}
+			
+		}
+		#main-main section
+		{
+			@include span-columns(5 of 5);
+			@include omega(1n);
+			height: $rms11;
+		}
+	}
+	
+	@include media($media-medium-up)
+	{
+		.main-main .region-wrap section .content
+		{
+			padding: $rms2;
+		}
+	}
+	
+	@include media($media-small)
+	{
+		.contact h4
+		{
+			font-size: $rms0;
+			line-height: $rms1;
+		}
+	}
+	
+	.social-image
+	{
+		margin-bottom: $rms2;
+		
+		@include span-columns(5 of 12);
+		@include omega(2n);
+		
+		&:nth-child(2n+1)
+		{
+			@include shift(1);
+		}
+		
+		
+		
+		img
+		{
+			max-height: $rms5;
+			
+		}
+		
+		&.linkedin img
+		{
+			max-width: 74%;
+			margin-top: 5% !important;
+		}
+		&.github img
+		{
+			max-width: 56%;
+			margin-top: 6% !important;
+		}
+		
+		&.twitter img
+		{
+			max-width: 28%;
+			margin-top: 2% !important;
+		}
+		
+	}
+	
+}

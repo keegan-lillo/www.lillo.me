@@ -44,25 +44,25 @@ $rms13: rem(modular-scale($ms-base-1 $ms-base-2, 13, $ms-ratio));
 $rms14: rem(modular-scale($ms-base-1 $ms-base-2, 14, $ms-ratio));
 
 
-@debug ms-4 $ms-4;
-@debug ms-3 $ms-3;
-@debug ms-2 $ms-2;
-@debug ms-1 $ms-1;
-@debug ms0  $ms0; 
-@debug ms1  $ms1; 
-@debug ms2  $ms2; 
-@debug ms3  $ms3; 
-@debug ms4  $ms4; 
-@debug ms5  $ms5; 
-@debug ms6  $ms6; 
-@debug ms7  $ms7; 
-@debug ms8  $ms8; 
-@debug ms9  $ms9; 
-@debug ms10 $ms10; 
-@debug ms11 $ms11; 
-@debug ms12 $ms12; 
-@debug ms13 $ms13;
-@debug ms14 $ms14; 
+@debug ms-4 $rms-4;
+@debug ms-3 $rms-3;
+@debug ms-2 $rms-2;
+@debug ms-1 $rms-1;
+@debug ms0  $rms0; 
+@debug ms1  $rms1; 
+@debug ms2  $rms2; 
+@debug ms3  $rms3; 
+@debug ms4  $rms4; 
+@debug ms5  $rms5; 
+@debug ms6  $rms6; 
+@debug ms7  $rms7; 
+@debug ms8  $rms8; 
+@debug ms9  $rms9; 
+@debug ms10 $rms10; 
+@debug ms11 $rms11; 
+@debug ms12 $rms12; 
+@debug ms13 $rms13;
+@debug ms14 $rms14; 
 
 
 // Typography
@@ -86,6 +86,13 @@ $color-map: (
 	who: #2AA316, 	
 	what: #3F9FE0, 
 	where: #DD482E
+);
+
+$color-map-dark: (	
+	index : shade(#4F4F4F, 40%),	
+	who: shade(#2AA316, 40%), 	
+	what: shade(#3F9FE0, 40%), 
+	where: shade(#DD482E, 40%)
 );
 
 $background-color-map: (	

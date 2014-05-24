@@ -104,12 +104,11 @@ a
 	outline : none;
 	cursor : pointer;
 	
+	@include ancestor-prop($color-map, color);
+	
 	&:hover
 	{
-		text-decoration: none;
-		
-		@include ancestor-prop($color-map, color);
-		
+		@include ancestor-prop($color-map-dark, color);
 	}
 }
 .hide
@@ -121,11 +120,7 @@ a
 {
 	 @include clearfix;
 }
-.section-head
-{
-	// @include span-columns(1 of 1);
-	// @include omega(1n);
-}
+
 
 #main-loader
 {
@@ -149,12 +144,27 @@ a
 }
 
 
+.section-head, h1
+{
+	margin-bottom: $rms-1;
+}
+
+.group
+{
+	@include clearfix;
+	
+	@include flex-medium-up;
+}
 
 
-
-#main-main
+.main-main
 { 
 	margin : $rms1 $rms-2;
+	
+	@include media($media-medium-up)
+	{
+		margin : $rms3 $gutter;
+	}
 
 	.region-wrap
 	{
@@ -162,6 +172,16 @@ a
 		
 		section
 		{
+			margin-bottom: $rms1;
+			
+			@include media($media-medium-up)
+			{
+				@include flex-grow(1);
+				@include flex-shrink(1);
+				@include flex-basis(auto);
+				margin-bottom: $gutter;
+			}
+			
 			@include media($media-small)
 			{
 				@include span-columns($cols-small of $cols-small);
@@ -172,17 +192,22 @@ a
 			{
 				@include span-columns($cols-medium / 2);
 				@include omega(2n);
+				margin-right : $gutter;
 			}
 			
 			@include media($media-large)
 			{
 				@include span-columns($cols-large / 3);
 				@include omega(3n);
+				margin-right : $gutter;
 			}
 			
-			margin-top: $rms0;
+			
+			
+			
 			@include sharp-shadow();
 			background : $body-background-color;
+			
 			.content
 			{
 				

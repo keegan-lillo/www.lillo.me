@@ -45,7 +45,10 @@
 		padding: 0;
 	    text-align: center; 
 		
-		
+		@include media($media-medium-up)
+		{
+			padding: 0 $gutter;
+		}
 		
 		li
 		{
@@ -108,13 +111,9 @@
 				padding: $rms-3 $rms-1;
 				display : inline-block;
 				width : 100%;
-				@include ancestor-prop($color-map, color);
+				// @include ancestor-prop($color-map, color);
 				outline : none;
-				&:hover
-				{
-					text-decoration: none;
-					border-bottom-width : 1px;
-				}
+				
 			}
 		}
 	}

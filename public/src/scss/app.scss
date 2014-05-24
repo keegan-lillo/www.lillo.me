@@ -15,6 +15,7 @@
 
 @import "mixins/typography";
 @import "mixins/animations";
+@import "mixins/general";
 
 // ========== here we go ==============
 
@@ -25,5 +26,7 @@
 @import "partials/nav";
 
 
-@import "pages/what";
+
 @import "pages/who";
+@import "pages/what";
+@import "pages/where";

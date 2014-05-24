@@ -1,19 +1,12 @@
 .route-who
 {
-	.group
+	
+	@include media($media-medium-up)
 	{
-		@include clearfix;
-		
-		@include media($media-medium-up)
-		{
-			@include flex-direction(row);
-			@include flex-wrap(wrap);
-			@include display(flex);
+		#main-main .group
+		{	
+			
 		}
-		
-		
-		
-		
 	}
 	
 	@include media($media-large)
@@ -24,16 +17,20 @@
 			@include shift(1);
 		}
 		
-		#main-main .group section
-		{	
-		
-			&:first-child
-			{
-				@include shift(1);
+		#main-main .group 
+		{
+			@include span-columns(10);
+			@include shift(1);
+			@include flex-medium-up;
+			
+			section
+			{	
+				
+				@include span-columns(5 of 10);
+				@include omega(2n);
 			}
 			
-			@include span-columns(5);
-			@include omega(2n);
 		}
+		
 	}
 }

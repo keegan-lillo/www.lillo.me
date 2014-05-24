@@ -3,19 +3,27 @@
 <div class="portfolio-container">
 	<% _.each(images, function(item){ %>
 		<section>
-			<div class="content">
-			
+			<div class="content portfolio-item">
+				
 				<a href="<%= item.full %>" target="_blank">
-			 			<img src="<%= item.thumb %>" alt="<%= name %>" />
-			 		</a>
-		</div>
-	</section>	
+					<div class="image-holder">
+		 				<img src="<%= item.thumb %>" alt="<%= name %>" />
+		 			</div>
+		 		</a>
+			 	
+			</div>
+		</section>	
 	<% }) %>
 		
 	<section>
 		<div class="content">
 			<h4>About The Project</h4>
+			
 			<%= project_description %>
+			
+			<% if(link) { %>
+				<h5><a href="<%= link %>" target="_blank">Project Website</a></h5>
+			<% } %>
 		</div>
 	</section>	
 	

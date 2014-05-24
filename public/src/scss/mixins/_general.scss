@@ -1,0 +1,12 @@
+@mixin flex-medium-up()
+{
+	@include media($media-medium-up)
+	{
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include display(flex);
+		
+		@content;
+	}
+}
+	

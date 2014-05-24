@@ -7,53 +7,100 @@
 		@include display(flex);
 	}
 	
+	@include media($media-medium)
+	{	
+		&:after
+		{
+			content:"";
+			display:block;
+			@include flex-grow(1);
+			@include flex-shrink(1);
+			@include flex-basis(auto);
+			@include span-columns($cols-medium / 2);
+			margin-right : 0;
+		}
+	}
 	section
 	{
 		
-	}
-	
-	.image-holder img
-	{
-		@include sharp-shadow();
 		
-		display : block;
+		@include media($media-medium)
+		{	
+			&:last-child
+			{
+				margin-right : $gutter !important;
+			}
+		}
 	}
 	
-	.responsibilities, .technology
+	.portfolio-item a
 	{
-		// @include span-columns(2);
-	}
-	
-	.expanded-content
-	{
-		display : none;
-	}
-	
-	.expand-btn
-	{
-		&.closed:before
+		color : inherit;
+		
+		&:hover .image-holder
 		{
-			
-			@include triangle($rms2, map-get($color-map, 'what'), 'down');
-			
-			content : " ";
-			display: block;
-			margin: 0 auto;
+			@include ancestor-prop($color-map-dark, border-bottom-color);
 		}
 		
-		&.open:before
+	}
+	
+	.image-holder
+	{
+		// @include sharp-shadow();
+		
+		border-bottom-width: 4px;
+		border-bottom-style : solid;
+		@include ancestor-prop($color-map, border-bottom-color);
+		
+		padding-left: $rms-1;
+		padding-right : $rms-1;
+		padding-top: $rms0 !important;
+		padding-bottom: $rms-2;
+		
+		img
 		{
-			@include triangle($rms2, map-get($color-map, 'what'), 'up');
-			
-			content : " ";
-			display: block;
-			margin: 0 auto;
+			display : block;
+			border: 1px solid $border-color;
 		}
 		
-		padding-top: $rms1;
-		display: block;		
-		@include position(absolute, null $rms-1 $rms1 $rms-1 );
+		
 	}
+	
+	// .responsibilities, .technology
+	// {
+		// // @include span-columns(2);
+	// }
+// 	
+	// .expanded-content
+	// {
+		// display : none;
+	// }
+// 	
+	// .expand-btn
+	// {
+		// &.closed:before
+		// {
+// 			
+			// @include triangle($rms2, map-get($color-map, 'what'), 'down');
+// 			
+			// content : " ";
+			// display: block;
+			// margin: 0 auto;
+		// }
+// 		
+		// &.open:before
+		// {
+			// @include triangle($rms2, map-get($color-map, 'what'), 'up');
+// 			
+			// content : " ";
+			// display: block;
+			// margin: 0 auto;
+		// }
+// 		
+		// padding-top: $rms1;
+		// display: block;		
+		// @include position(absolute, null $rms-1 $rms1 $rms-1 );
+	// }
 }
 
 

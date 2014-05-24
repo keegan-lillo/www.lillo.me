@@ -1,7 +1,7 @@
 @import '../libs/neat/neat-helpers';
 
 $column: $rms3 ; // Column width
-$gutter: $rms-2 ; // Gutter between each two columns
+$gutter: $rms1 ; // Gutter between each two columns
 $grid-columns: 12 ; // Total number of columns in the grid
 $max-width: 1500px; // rem(modular-scale($ms-base-1 $ms-base-2, 17, $ms-ratio)) ; // Max-width of the outer container
 $border-box-sizing: true ; // Makes all elements have a border-box layout
