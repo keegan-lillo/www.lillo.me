@@ -2,8 +2,7 @@
 .project
 .settings
 
-public/src/css/screen.css
-public/src/css/print.css
+public/src/css/app.css
 public/src/css/ie.css
 public/src/js/main-min.js
 public/src/js/main-min.css
