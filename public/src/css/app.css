@@ -39,48 +39,6 @@
   100% {
     left: 100%;
     right: 0%; } }
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
-@-moz-keyframes fadein {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
-@keyframes fadein {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
-@-webkit-keyframes slidein {
-  from {
-    position: relative;
-    left: 100%; }
-
-  to {
-    position: relative;
-    left: 0; } }
-@-moz-keyframes slidein {
-  from {
-    position: relative;
-    left: 100%; }
-
-  to {
-    position: relative;
-    left: 0; } }
-@keyframes slidein {
-  from {
-    position: relative;
-    left: 100%; }
-
-  to {
-    position: relative;
-    left: 0; } }
 /**
  * html5doctor.com Reset Stylesheet v1.6.1
  * (http://html5doctor.com/html-5-reset-stylesheet/)
@@ -260,10 +218,13 @@ a {
   display: table;
   clear: both; }
 
+#main-main {
+  opacity: 0; }
+
 #main-loader {
   position: fixed;
   top: 0;
-  height: 5px;
+  height: 4px;
   z-index: 9999;
   -webkit-animation: loader 2s ease-in-out infinite;
   -moz-animation: loader 2s ease-in-out infinite;
@@ -276,9 +237,6 @@ a {
     background-color: #3f9fe0; }
   .route-where #main-loader {
     background-color: #dd482e; }
-
-.region-wrap {
-  animation: fadein 1s; }
 
 .section-head, h1 {
   margin-bottom: 0.78616rem; }

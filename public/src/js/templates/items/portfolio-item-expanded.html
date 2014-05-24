@@ -21,13 +21,13 @@
 			
 			<%= project_description %>
 			
-			<% if(link) { %>
+			<% if(typeof link !== "undefined" && link) { %>
 				<h5><a href="<%= link %>" target="_blank">Project Website</a></h5>
 			<% } %>
 		</div>
 	</section>	
 	
-	<% if(my_comments) { %>
+	<% if(typeof my_comments !== "undefined" && my_comments) { %>
 		<section>
 			<div class="content">
 			<aside class="my_comments">

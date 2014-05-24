@@ -38,13 +38,15 @@ define(function (require)
 			{
 				if ($(window).scrollTop() > $nav_el.offset().top) 
 				{
+					$nav_el_placeholder.height($nav_el_list.outerHeight());
 		            $nav_el_list.addClass("fixed");
-		            $nav_el_placeholder.height($nav_el_list.outerHeight());
+		            
 		        } 
 		        else if($nav_el_list.hasClass("fixed"))
 		        {
-		        	$nav_el_list.removeClass("fixed");
 		        	$nav_el_placeholder.height(0);
+		        	$nav_el_list.removeClass("fixed");
+		        	
 		        }
 			};
 			

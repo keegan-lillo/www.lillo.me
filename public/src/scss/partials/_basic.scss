@@ -120,13 +120,17 @@ a
 {
 	 @include clearfix;
 }
+#main-main
+{
+	opacity : 0;
+}
 
 
 #main-loader
 {
 	position:fixed;
 	top:0;
-	height: 5px;	
+	height: 4px;	
 	z-index: 9999;
 	
 	@include ancestor-prop($color-map, background-color);
@@ -140,7 +144,7 @@ a
 
 .region-wrap
 {
-	animation : fadein 1s;
+	// animation : fadein 1s;
 }
 
 

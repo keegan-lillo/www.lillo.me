@@ -25,15 +25,6 @@ define(function(require)
 		console.log('init app');
 		
 		this.layouts.primary.render(); 
-		this.routers.main.on('route', function(route)
-		{
-			$("body")
-				.removeClass(function(index, css)
-				{
-					return (css.match(/route-\S+/g) || []).join(' ');
-				})
-				.addClass('route-'+route);
-		}); 
 
 
 	});

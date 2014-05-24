@@ -12,6 +12,13 @@ define(function (require) {
 
 		_init: function(route)
 		{
+			$("body")
+				.removeClass(function(index, css)
+				{
+					return (css.match(/route-\S+/g) || []).join(' ');
+				})
+				.addClass('route-'+route);
+			
 			if(this._is_init)
 			{
 				return;
@@ -34,76 +41,91 @@ define(function (require) {
 
 		'index' : function()
 		{
-			this._init('index');
-			App.layouts.primary.show_loader();
-			var Home_View = require('views/home');
-		 	App.layouts.primary.main.show(new Home_View);
-		 	App.layouts.primary.hide_loader();
+			var _this = this;
+			
+			App.layouts.primary.show_loader().done(function()
+			{
+				_this._init('index');
+				var Home_View = require('views/home');
+		 		App.layouts.primary.main.show(new Home_View);
+		 		App.layouts.primary.hide_loader();
+			});
+			
 			
 		},
 		
 		'who' : function() 
 		{			
-			this._init('who');
-			App.layouts.primary.show_loader();
-			var Who_View = require('views/who');
-		 	App.layouts.primary.main.show(new Who_View);
-		 	App.layouts.primary.scroll_to('nav');
-		 	App.layouts.primary.hide_loader();
+			var _this = this;
+			
+			App.layouts.primary.show_loader().done(function()
+			{
+				_this._init('who');
+				var Who_View = require('views/who');
+			 	App.layouts.primary.main.show(new Who_View);
+			 	App.layouts.primary.scroll_to('nav');
+		 		App.layouts.primary.hide_loader();
+		 	});
 		},
 		
 		'what' : function(id) 
 		{			
-			this._init('what');
-			
+			var _this = this;
 			var Portfolio_Collection = require('collections/portfolio');
-			App.layouts.primary.show_loader();
 			
-			if(id)
+			App.layouts.primary.show_loader().done(function()
 			{
-				var Portfolio_Model = require('models/portfolio-item');
-				var portfolio_item = Portfolio_Collection.get(id) || new Portfolio_Model({'id' : id});
-								
-				portfolio_item.fetch({lazy : true})
-					.done(function()
-					{
-						var What_Expanded_View = require('views/what-expanded');
-						App.layouts.primary.main.show(new What_Expanded_View(
+				_this._init('what');
+			
+				if(id)
+				{
+					var Portfolio_Model = require('models/portfolio-item');
+					var portfolio_item = Portfolio_Collection.get(id) || new Portfolio_Model({'id' : id});
+									
+					portfolio_item.fetch({lazy : true})
+						.done(function()
 						{
-							model : portfolio_item
-						}));
-						
-						App.layouts.primary.hide_loader();
-						App.layouts.primary.scroll_to('nav');
-					});
-				
-			}
-			else
-			{
-				Portfolio_Collection.fetch({lazy : true})
-					.done(function()
-					{
-						var What_View = require('views/what');
-						App.layouts.primary.main.show(new What_View(
+							var What_Expanded_View = require('views/what-expanded');
+							App.layouts.primary.main.show(new What_Expanded_View(
+							{
+								model : portfolio_item
+							}));
+							
+							App.layouts.primary.hide_loader();
+							App.layouts.primary.scroll_to('nav');
+						});
+					
+				}
+				else
+				{
+					Portfolio_Collection.fetch({lazy : true})
+						.done(function()
 						{
-							collection : Portfolio_Collection
-						}));
-						
-						App.layouts.primary.hide_loader();
-						// App.layouts.primary.scroll_to('nav');
-					});
-			}
+							var What_View = require('views/what');
+							App.layouts.primary.main.show(new What_View(
+							{
+								collection : Portfolio_Collection
+							}));
+							
+							App.layouts.primary.hide_loader();
+							App.layouts.primary.scroll_to('nav');
+						});
+				}
+			});
 			
 		},
 		
 		'where' : function() 
 		{			
-			this._init('where');
-			App.layouts.primary.show_loader();
-			var Where_View = require('views/where');
-			App.layouts.primary.main.show(new Where_View);
-			App.layouts.primary.scroll_to('nav');
-			App.layouts.primary.hide_loader();
+			var _this = this;
+			App.layouts.primary.show_loader().done(function()
+			{
+				_this._init('where');
+				var Where_View = require('views/where');
+				App.layouts.primary.main.show(new Where_View);
+				App.layouts.primary.scroll_to('nav');
+				App.layouts.primary.hide_loader();
+			});
 		}
 	};
 	
