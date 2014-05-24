@@ -105,10 +105,12 @@ a
 	cursor : pointer;
 	
 	@include ancestor-prop($color-map, color);
+	transition: $color-trans-speed color;
 	
 	&:hover
 	{
 		@include ancestor-prop($color-map-dark, color);
+		transition: $color-trans-speed / 3 color;
 	}
 }
 .hide
@@ -135,6 +137,7 @@ a
 	
 	@include ancestor-prop($color-map, background-color);
 	@include animation(loader 2s ease-in-out infinite);
+	transition: $color-trans-speed background-color;
 }
 
 #page 

@@ -79,8 +79,9 @@ $base-line-height : $rms2;
 // User Interface Colors
 $global-bg-color: #EDEDED;
 $navbar-color: #F7F7F7;
-$border-color: #ddd;
- 
+$border-color: #ddd; 
+$color-trans-speed : 0.5s;
+
 $color-map: (	
 	index : #4F4F4F,	
 	who: #2AA316, 	

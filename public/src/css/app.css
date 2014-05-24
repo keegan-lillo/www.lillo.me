@@ -192,7 +192,8 @@ a {
   color: inherit;
   text-decoration: none;
   outline: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.5s color; }
   .route-index a {
     color: #4f4f4f; }
   .route-who a {
@@ -201,14 +202,16 @@ a {
     color: #3f9fe0; }
   .route-where a {
     color: #dd482e; }
-  .route-index a:hover {
-    color: #2f2f2f; }
-  .route-who a:hover {
-    color: #19610d; }
-  .route-what a:hover {
-    color: #255f86; }
-  .route-where a:hover {
-    color: #842b1b; }
+  a:hover {
+    transition: 0.16667s color; }
+    .route-index a:hover {
+      color: #2f2f2f; }
+    .route-who a:hover {
+      color: #19610d; }
+    .route-what a:hover {
+      color: #255f86; }
+    .route-where a:hover {
+      color: #842b1b; }
 
 .hide {
   display: none; }
@@ -228,7 +231,8 @@ a {
   z-index: 9999;
   -webkit-animation: loader 2s ease-in-out infinite;
   -moz-animation: loader 2s ease-in-out infinite;
-  animation: loader 2s ease-in-out infinite; }
+  animation: loader 2s ease-in-out infinite;
+  transition: 0.5s background-color; }
   .route-index #main-loader {
     background-color: #4f4f4f; }
   .route-who #main-loader {
@@ -365,6 +369,7 @@ a {
   vertical-align: middle;
   /* top | middle | bottom ... do what you want */ }
   #logo svg.logo {
+    transition: 0.5s fill;
     height: 100%;
     width: 100%;
     display: block;
@@ -456,13 +461,17 @@ a {
         #main-nav ul li:first-child {
           margin-left: 25.82194%; } }
     .route-index #main-nav ul li.nav__item--index {
-      border-bottom-color: #4f4f4f; }
+      border-bottom-color: #4f4f4f;
+      transition: 0.5s border-bottom-color; }
     .route-who #main-nav ul li.nav__item--who {
-      border-bottom-color: #2aa316; }
+      border-bottom-color: #2aa316;
+      transition: 0.5s border-bottom-color; }
     .route-what #main-nav ul li.nav__item--what {
-      border-bottom-color: #3f9fe0; }
+      border-bottom-color: #3f9fe0;
+      transition: 0.5s border-bottom-color; }
     .route-where #main-nav ul li.nav__item--where {
-      border-bottom-color: #dd482e; }
+      border-bottom-color: #dd482e;
+      transition: 0.5s border-bottom-color; }
     #main-nav ul li a {
       padding: 0.48588rem 0.78616rem;
       display: inline-block;

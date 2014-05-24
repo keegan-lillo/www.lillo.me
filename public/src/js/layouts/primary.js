@@ -33,7 +33,7 @@ define(function(require)
 			var anim_status = $.Deferred();
 			
 			this.$('#main-loader').fadeIn(250);
-			this.$('#main-main').fadeTo(250, 0, function()
+			this.$('#main-main').fadeTo(150, 0, function()
 			{
 				anim_status.resolve();
 			});

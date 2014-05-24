@@ -103,6 +103,7 @@
 			@include ancestor-selector( $color-map, '.nav__item--')
 			{
 				border-bottom-color : $ancestor-selector-current-val;
+				transition: $color-trans-speed border-bottom-color;
 			}	
 				
 			
