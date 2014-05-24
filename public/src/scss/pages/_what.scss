@@ -19,12 +19,11 @@
 			@include span-columns($cols-medium / 2);
 			margin-right : 0;
 		}
-	}
-	section
+	} 
+	
+	@include media($media-medium)
 	{
-		
-		
-		@include media($media-medium)
+		.portfolio-item
 		{	
 			&:last-child
 			{

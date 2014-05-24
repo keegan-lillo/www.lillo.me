@@ -581,7 +581,7 @@ a {
     .portfolio-container:after:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 680px) and (max-width: 1055px) {
-  .portfolio-container section:last-child {
+  .portfolio-container .portfolio-item:last-child {
     margin-right: 1.272rem !important; } }
 .portfolio-container .portfolio-item a {
   color: inherit; }
