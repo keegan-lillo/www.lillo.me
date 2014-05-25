@@ -4,8 +4,6 @@ require.config(
 {
 	waitSeconds : 30,
 	
-	urlArgs : 'bust=v1',
-	
 	paths :
 	{
 		'jquery' : 'bower_components/jquery/dist/jquery',

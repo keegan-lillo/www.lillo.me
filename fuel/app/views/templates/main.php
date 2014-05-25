@@ -58,8 +58,9 @@
 			};
 		</script>
 		
+		<?php $require_js_main = Asset::find_file($app_config['requirejs_main'], 'js') ?>
 		<?= Asset::js('bower_components/requirejs/require.js', array(
-			'data-main' => Asset::find_file($app_config['requirejs_main'], 'js'),
+			'data-main' => $require_js_main.'?'.filemtime($require_js_main),
 			'async' => 'async'
 		, 'js')) ?>
 		
