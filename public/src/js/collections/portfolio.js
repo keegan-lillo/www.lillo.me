@@ -7,7 +7,11 @@ define(function (require)
 	
 	_class = LilloCollection.extend(
 	{
-		url: App.config.api_endpoint + 'portfolio/',
+		url : function() 
+		{
+			return App.config.api_endpoint + 'portfolio/' + '?v=' + App.config.api_version;
+		},
+		
 		model : Portfolio_Model
 		
 	});

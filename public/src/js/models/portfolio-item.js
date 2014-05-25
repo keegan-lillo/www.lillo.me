@@ -10,6 +10,11 @@ define(function (require)
 	{
 		urlRoot: App.config.api_endpoint + 'portfolio/',
 		
+		url : function() 
+		{
+			return this.urlRoot + this.id + '?v=' + App.config.api_version;
+		},
+		
 		parse : function(response, options) 
 		{
 			_.each(response.images, function(item, index, list)

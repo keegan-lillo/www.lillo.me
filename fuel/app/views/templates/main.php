@@ -53,7 +53,8 @@
 			{
 				config : 
 				{
-					base : '<?= Uri::base() ?>'
+					base : '<?= Uri::base() ?>',
+					api_version : '<?= $api_version ?>'
 				}
 			};
 		</script>

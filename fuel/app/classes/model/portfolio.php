@@ -24,5 +24,10 @@ class Portfolio extends \Model
 		
 		return $data;
     }
+	
+	public function get_data_date_modified()
+	{
+		return filemtime($this->_app_config['portfolio_data_dir']);
+	}
 
 }

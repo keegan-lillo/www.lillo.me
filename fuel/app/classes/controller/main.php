@@ -27,7 +27,7 @@ class Controller_Main extends Controller_Template
 	 */
 	public function action_index($path = 'home')
 	{
-			
+		$this->template->api_version = \Controller_Api::get_api_version();
 		
 		$path = $this->param('path', $path);
 		Profiler::console($path);
