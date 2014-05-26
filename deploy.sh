@@ -18,6 +18,6 @@ php index.php api/portfolio > api/portfolio/index.html
 
 for i in {1..9}
 do
-	mkdir -p "api/portfolio/{$i}"
-	php index.php "api/portfolio/{$i}" > "api/portfolio/{$i}/index.html"
+	mkdir -p "api/portfolio/$i"
+	php index.php "api/portfolio/$i" > "api/portfolio/$i/index.html"
 done
