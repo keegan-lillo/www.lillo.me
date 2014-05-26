@@ -12,7 +12,7 @@ define(function (require)
 		
 		url : function() 
 		{
-			return this.urlRoot + this.id + '?v=' + App.config.api_version;
+			return this.urlRoot + this.id + '?v=' + App.config.app_version;
 		},
 		
 		parse : function(response, options) 

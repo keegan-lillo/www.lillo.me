@@ -9,7 +9,7 @@ define(function (require)
 	{
 		url : function() 
 		{
-			return App.config.api_endpoint + 'portfolio/' + '?v=' + App.config.api_version;
+			return App.config.api_endpoint + 'portfolio/' + '?v=' + App.config.app_version;
 		},
 		
 		model : Portfolio_Model

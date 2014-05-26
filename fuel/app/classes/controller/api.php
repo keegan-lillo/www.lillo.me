@@ -28,11 +28,5 @@ class Controller_Api extends Controller_Rest
 		
 		$this->response($data, 200); 
 	}
-	
-	public static function get_api_version()
-	{
-		$portfolio = new Portfolio();
-		return $portfolio->get_data_date_modified();
-	}
 
 } 

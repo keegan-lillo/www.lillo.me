@@ -5,7 +5,7 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
-		<title>Keegan Lillo</title>
+		<title><?= $title ?></title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="Keegan Lillo">
@@ -33,8 +33,7 @@
 		<link rel="shortcut icon" href="<?= Asset::get_file('favicon.ico', 'img') ?>"/>
 		
 		<!-- =========== CSS =========  -->
-		
-		<?= Asset::css('app.css') ?>
+		<link rel="stylesheet" href="<?= Asset::get_file('app.css', 'css').'?v='.$app_version ?>" />
 		<?= Asset::css('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600')?>
 		<!-- =========== Javascript =========  -->
 		
@@ -54,16 +53,16 @@
 				config : 
 				{
 					base : '<?= Uri::base() ?>',
-					api_version : '<?= $api_version ?>'
+					app_version : '<?= $app_version ?>'
 				}
 			};
 		</script>
 		
-		<?php $require_js_main = Asset::find_file($app_config['requirejs_main'], 'js') ?>
-		<?= Asset::js('bower_components/requirejs/require.js', array(
-			'data-main' => $require_js_main.'?'.filemtime($require_js_main),
-			'async' => 'async'
-		, 'js')) ?>
+		<script 
+			src="<?= Asset::get_file('bower_components/requirejs/require.js', 'js').'?v='.$app_version ?>"
+			data-main="<?= Asset::get_file($app_config['requirejs_main'], 'js').'?v='.$app_version ?>"
+			async="async"
+		></script>
 		
 	</head>
 	<body id="body" class="wrapper route-index">

@@ -27,10 +27,9 @@ class Controller_Main extends Controller_Template
 	 */
 	public function action_index($path = 'home')
 	{
-		$this->template->api_version = \Controller_Api::get_api_version();
+		$this->template->app_version = $this->_app_config['app_version'];
 		
 		$path = $this->param('path', $path);
-		Profiler::console($path);
 		
 		$this->template->title = 'Keegan Lillo - Full Stack Developer';
         $this->template->content = View::forge('main/index');
