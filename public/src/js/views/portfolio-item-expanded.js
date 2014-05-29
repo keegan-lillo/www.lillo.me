@@ -29,7 +29,6 @@ define(function (require)
 		
 		initialize : function()	
 		{
-			this.model = 
 			// console.log(this);
 		},
 		
