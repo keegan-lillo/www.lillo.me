@@ -24,4 +24,4 @@ done
 
 aws cloudfront create-invalidation \
 --distribution-id E1TZPXJTMZX7VZ \
---invalidation-batch "{ \"Paths\": { \"Quantity\": 2, \"Items\": [\"/\", \"index.html\"] }, \"CallerReference\": \"$APP_VERSION\" }"
+--invalidation-batch "{ \"Paths\": { \"Quantity\": 2, \"Items\": [\"/\", \"/index.html\"] }, \"CallerReference\": \"$APP_VERSION\" }"
