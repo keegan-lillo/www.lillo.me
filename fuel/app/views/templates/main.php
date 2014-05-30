@@ -20,15 +20,6 @@
 		<!-- =========== Javascript =========  -->
 		
 		<script>
-			(function(){
-				var method, noop = function(){}, methods = [ "assert", "clear", "count", "debug", "dir", "dirxml", 
-					"error", "exception", "group", "groupCollapsed", "groupEnd", "info", "log", "markTimeline", 
-					"profile", "profileEnd", "table", "time", "timeEnd","timeStamp", "trace", "warn"],
-					length = methods.length, console = (window.console = window.console || {});
-				while(length--){ method	= methods[length]; if(!console[method]) console[method] = noop;} 
-			}());	
-		</script>
-		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
