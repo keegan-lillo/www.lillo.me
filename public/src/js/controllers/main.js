@@ -47,7 +47,7 @@ define(function (require) {
 				_this._init('index');
 				var Home_View = require('views/home');
 		 		App.layouts.primary.main.show(new Home_View);
-		 		document.title = App.config.base_title  ;
+		 		App.set_page(App.config.base_title)  ;
 		 		App.layouts.primary.hide_loader();
 			});
 			
@@ -63,7 +63,7 @@ define(function (require) {
 				_this._init('who');
 				var Who_View = require('views/who');
 			 	App.layouts.primary.main.show(new Who_View);
-			 	document.title = 'Who - ' + App.config.base_title;
+			 	App.set_page('Who - ' + App.config.base_title);
 			 	App.layouts.primary.scroll_to('nav');
 		 		App.layouts.primary.hide_loader();
 		 	});
@@ -92,7 +92,7 @@ define(function (require) {
 								model : portfolio_item
 							}));
 							
-							document.title = 'What - ' + App.layouts.primary.main.$el.find('h1').text() + ' - ' + App.config.base_title;
+							App.set_page('What - ' + App.layouts.primary.main.$el.find('h1').text() + ' - ' + App.config.base_title);
 							App.layouts.primary.hide_loader();
 							App.layouts.primary.scroll_to('nav');
 						});
@@ -109,7 +109,7 @@ define(function (require) {
 								collection : Portfolio_Collection
 							}));
 							
-							document.title = 'What - ' + App.config.base_title;
+							App.set_page('What - ' + App.config.base_title);
 							App.layouts.primary.hide_loader();
 							App.layouts.primary.scroll_to('nav');
 						});
@@ -126,7 +126,7 @@ define(function (require) {
 				_this._init('where');
 				var Where_View = require('views/where');
 				App.layouts.primary.main.show(new Where_View);
-				document.title = 'Where - ' + App.config.base_title;
+				App.set_page('Where - ' + App.config.base_title);
 				App.layouts.primary.scroll_to('nav');
 				App.layouts.primary.hide_loader();
 			});

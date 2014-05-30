@@ -84,10 +84,6 @@ function (app, Backbone, Main_Router)
 	app.start();
 	
 	Backbone.history.start({pushState: app.config.use_push_state});
-	Backbone.history.on('route', function()
-	{
-		ga('send', 'pageview', Backbone.history.getFragment()); 
-	});
 });
 
 
