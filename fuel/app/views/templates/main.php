@@ -12,7 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="<?= Asset::get_file('favicon.ico', 'img') ?>"/>
 		
-		<base href="<?= Uri::base() ?>" />
+		<base href="<?= Uri::base() ?: $app_config['production_base_url'] ?>" />
 		
 		<!-- =========== CSS =========  -->
 		<link rel="stylesheet" href="<?= Asset::get_file('app.css', 'css').'?v='.$app_version ?>" />
@@ -43,7 +43,7 @@
 			{
 				config : 
 				{
-					base : '<?= Uri::base() ?>',
+					base : '<?= Uri::base() ?: $app_config['production_base_url'] ?>',
 					app_version : '<?= $app_version ?>'
 				}
 			};
