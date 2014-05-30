@@ -34,6 +34,7 @@
 			{
 				config : 
 				{
+					base_title : "<?= $title ?>",
 					base : '<?= Uri::base() ?: $app_config['production_base_url'] ?>',
 					app_version : '<?= $app_version ?>'
 				}
