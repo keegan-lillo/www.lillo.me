@@ -7,7 +7,6 @@ require.config(
 	paths :
 	{
 		'jquery' : 'bower_components/jquery/dist/jquery',
-		'jquery.mobile' : 'libs/jquery.mobile.custom/jquery.mobile.custom',
 		
 		'underscore' : 'bower_components/underscore/underscore',
 		'backbone' : 'bower_components/backbone/backbone',
@@ -76,8 +75,7 @@ require(
 [
 	'app',
 	'backbone',
-	'routers/main',
-	'jquery.mobile'
+	'routers/main'
 ], 
 
 function (app, Backbone, Main_Router) 
@@ -86,6 +84,10 @@ function (app, Backbone, Main_Router)
 	app.start();
 	
 	Backbone.history.start({pushState: app.config.use_push_state});
+	Backbone.history.on('route', function()
+	{
+		ga('send', 'pageview');
+	});
 });
 
 

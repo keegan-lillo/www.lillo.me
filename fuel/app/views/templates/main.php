@@ -6,31 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
 		<title><?= $title ?></title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Keegan Lillo. Full stack developer with a focus on application architecture. Certified AWS Solutions Architect that loves to make front-end development come alive with cloud infrastructure." />
+		<meta name="keywords" content="Keegan Lillo, Full stack developer, PHP, CSS, SASS, AWS, amazon web services" />
 		<meta name="author" content="Keegan Lillo">
-		
-		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-	
-		<!-- Facebook Metadata /-->
-		<meta property="fb:page_id" content="" />
-		<meta property="og:image" content="" />
-		<meta property="og:description" content=""/>
-		<meta property="og:title" content=""/>
-	
-		<!-- Google+ Metadata /-->
-		<meta itemprop="name" content="">
-		<meta itemprop="description" content="">
-		<meta itemprop="image" content="">
-	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<link rel="shortcut icon" href="<?= Asset::get_file('favicon.ico', 'img') ?>"/>
 		
 		<base href="<?= Uri::base() ?>" />
-		
-		
-		
-		<link rel="shortcut icon" href="<?= Asset::get_file('favicon.ico', 'img') ?>"/>
 		
 		<!-- =========== CSS =========  -->
 		<link rel="stylesheet" href="<?= Asset::get_file('app.css', 'css').'?v='.$app_version ?>" />
@@ -44,7 +26,16 @@
 					"profile", "profileEnd", "table", "time", "timeEnd","timeStamp", "trace", "warn"],
 					length = methods.length, console = (window.console = window.console || {});
 				while(length--){ method	= methods[length]; if(!console[method]) console[method] = noop;} 
-			}());
+			}());	
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-51493929-1', 'lillo.me');
+		
 		</script>
 		
 		<script>
