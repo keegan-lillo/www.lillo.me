@@ -24,7 +24,6 @@ define(function (require) {
 				return;
 			}
 			
-			console.log('init main controller', route);
 			var Header_View = require('views/header');
 			var Nav_View = require('views/nav');
 			

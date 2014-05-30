@@ -5,9 +5,7 @@ define(function (require)
 	_class = Backbone.Model.extend(
 	{
 		fetch : function (args) 
-		{
-			console.log(this);
-			
+		{			
 			if (args && args.lazy && this.id && this.keys().length > 1)
 			{
 				return $.Deferred().resolve();

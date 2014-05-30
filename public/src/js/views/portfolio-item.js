@@ -26,10 +26,7 @@ define(function (require)
 			}
 		},
 		
-		initialize : function()	
-		{
-			// console.log(this);
-		},
+		initialize : function() {},
 		
 		onRender : function() 
 		{

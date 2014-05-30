@@ -24,11 +24,7 @@ define(function (require)
 		},
 		
 		
-		onRender : function()
-		{
-			// this.collection.fetch();
-			// console.log('collection', this.collection);
-		},
+		onRender : function() {},
 		
 	});
 	

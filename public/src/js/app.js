@@ -21,19 +21,13 @@ define(function(require)
 	app.layouts.primary = new Primary_Layout();
 	
 	app.addInitializer(function(options)
-	{
-		console.log('init app');
-		
+	{		
 		this.layouts.primary.render(); 
-
-
 	});
 
 	
 
 	window.App = $.extend(true, {}, app, window.App);
-
-	// console.log(window.App);
-
+	
 	return window.App; 
 }); 
