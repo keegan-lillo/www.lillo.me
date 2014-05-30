@@ -21,3 +21,7 @@ do
 	mkdir -p "api/portfolio/$i"
 	php index.php "api/portfolio/$i" > "api/portfolio/$i/index.html"
 done
+
+aws cloudfront create-invalidation \
+--distribution-id E1TZPXJTMZX7VZ \
+--invalidation-batch "{ \"Paths\": { \"Quantity\": 1, \"Items\": [\"/\"] }, \"CallerReference\": \"$APP_VERSION\" }"
