@@ -1,3 +1,5 @@
+$color: #0e63e3;
+
 .page {
   align-self: center;
   width: 100%;
@@ -6,5 +8,5 @@
 }
 
 .heading {
-  color: #0e63e3;
+  color: $color;
 }

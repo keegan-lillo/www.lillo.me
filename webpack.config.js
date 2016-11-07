@@ -3,34 +3,20 @@ import path from 'path';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import { phenomicLoader } from 'phenomic';
-import PhenomicLoaderFeedWebpackPlugin
-  from 'phenomic/lib/loader-feed-webpack-plugin';
-
-import pkg from './package.json';
 
 export default (config = {}) => {
   const postcssPlugins = () => [
-    require('stylelint')(),
-    require('postcss-cssnext')({
-      browsers: 'last 2 versions',
-      features: {
-        customProperties: {
-          variables: {
-            mainColor: '#111',
-            mainColorContrasted: '#eee',
-          },
-        },
-      },
-    }),
     require('postcss-reporter')(),
-    ...!config.production ? [
-      require('postcss-browser-reporter')(),
-    ] : [],
+    require('autoprefixer')({
+      browsers: ['Android 4.3', 'iOS 8', 'ie >= 10'],
+      cascade: false,
+    }),
+    ...config.dev && [require('postcss-browser-reporter')()],
   ];
 
   return {
     ...config.dev && {
-      devtool: '#source-map',
+      devtool: 'inline-source-map',
     },
     module: {
       noParse: /\.min\.js/,
@@ -66,7 +52,7 @@ export default (config = {}) => {
           ],
           loaders: [
             'babel-loader?cacheDirectory',
-            'eslint-loader' + (config.dev ? '?emitWarning' : ''),
+//            'eslint-loader' + (config.dev ? '?emitWarning' : ''),
           ],
         },
 
@@ -74,49 +60,34 @@ export default (config = {}) => {
         // by default *.css files are considered as CSS Modules
         // And *.global.css are considered as global (normal) CSS
 
-        // *.css => CSS Modules
-        {
-          test: /\.css$/,
-          exclude: /\.global\.css$/,
-          include: path.resolve(__dirname, 'src'),
-          loader: ExtractTextPlugin.extract(
-            'style-loader',
-            [ `css-loader?modules&localIdentName=${
-              config.production ?
-                '[hash:base64:5]' :
-                '[path][name]--[local]--[hash:base64:5]'
-              } 
-              ${config.dev && '&sourceMap'}`,
-              'postcss-loader',
-            ].join('!'),
-          ),
-        },
+        // *.scss => CSS Modules
         {
           test: /\.scss$/,
           include: path.resolve(__dirname, 'src'),
+          exclude: /\.global\.scss$/,
           loader: ExtractTextPlugin.extract(
-            'style-loader',
-            [ `css-loader?modules&localIdentName=${
-                config.production ?
-                  '[hash:base64:5]' :
-                  '[path][name]--[local]--[hash:base64:5]'
-                } 
-              ${config.dev && '&sourceMap'}`,
-              'postcss-loader',
-            ].join('!'),
-            'sass-loader',
+            'style',
+            [
+              `css?modules&localIdentName=${config.production ?
+                '[hash:base64:5]' :
+                '[path][name]--[local]--[hash:base64:5]'} 
+                ${config.dev && '&sourceMap'}`,
+              'postcss',
+              `sass?${config.dev && 'sourceMap'}`,
+            ]
           ),
         },
-        // *.global.css => global (normal) css
+        // *.global.scss => global (normal) css
         {
-          test: /\.global\.css$/,
+          test: /\.global\.scss$/,
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
             [
-              `css-loader?${config.dev && '&sourceMap'}`,
-              'postcss-loader',
-            ].join('!'),
+              `css?${config.dev && '&sourceMap'}`,
+              'postcss',
+              `sass?${config.dev && 'sourceMap'}`,
+            ]
           ),
         },
 
@@ -141,32 +112,12 @@ export default (config = {}) => {
     postcss: postcssPlugins,
 
     plugins: [
-      new PhenomicLoaderFeedWebpackPlugin({
-        // here you define generic metadata for your feed
-        feedsOptions: {
-          title: pkg.name,
-          site_url: pkg.homepage,
-        },
-        feeds: {
-          // here we define one feed, but you can generate multiple, based
-          // on different filters
-          'feed.xml': {
-            collectionOptions: {
-              filter: { layout: 'Post' },
-              sort: 'date',
-              reverse: true,
-              limit: 20,
-            },
-          },
-        },
-      }),
-
       new ExtractTextPlugin('[name].[hash].css', { disable: config.dev }),
       ...config.production && [
         new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin(
-          { compress: { warnings: false } }
-        ),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: { warnings: false },
+        }),
       ],
     ],
 

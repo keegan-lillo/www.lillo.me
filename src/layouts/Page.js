@@ -3,9 +3,9 @@ import Helmet from 'react-helmet';
 import invariant from 'invariant';
 import { BodyContainer, joinUri } from 'phenomic';
 
-import Loading from '../../components/Loading';
+import Loading from '../components/Loading';
 
-import styles from './index.scss';
+import styles from './Page.scss';
 
 const Page = (
   {
@@ -64,7 +64,7 @@ const Page = (
 };
 
 Page.propTypes = {
-  isLoading: PropTypes.boolean,
+  isLoading: PropTypes.bool,
   children: PropTypes.node,
   __filename: PropTypes.string.isRequired,
   __url: PropTypes.string.isRequired,

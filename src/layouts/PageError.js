@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import styles from './index.css';
+import styles from './PageError.scss';
 
 const PageError = ({ error, errorText }) => (
   <div className={ styles.container }>

@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "extends": [
+    "./node_modules/phenomic/lib/eslint-config-recommended/index.js",
+    "pebble"
+  ],
+  "rules": {
+    "arrow-body-style": [2, "as-needed"],
+    "arrow-parens": [2, "always"],
+    "comma-dangle": [2, "always-multiline"],
+    "curly": [2, "all"],
+    "max-len": [1, 120],
+    "no-restricted-properties": [2, {
+      "object": "describe",
+      "property": "only"
+    }, {
+      "object": "it",
+      "property": "only"
+    }
+    ],
+    "no-unused-vars": [2, {"argsIgnorePattern": "^_.*"}],
+    "require-jsdoc": 0,
+    "strict": 0,
+    "valid-jsdoc": 2,
+    "object-curly-spacing": [2, "always"]
+  }
+}

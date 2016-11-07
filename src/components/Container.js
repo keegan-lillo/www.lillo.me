@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import styles from './index.css';
+import styles from './Container.scss';
 
 const Container = (props) => (
   <div className={ styles.container }>

@@ -16,7 +16,6 @@
   "phenomic": {
     "CNAME": false
   },
-  "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
   "babel": {
     "env": {
       "test": {
@@ -45,74 +44,11 @@
           "babel-preset-stage-1",
           "babel-preset-react"
         ]
-      },
-      "webpack-development": {
-        "presets": [
-          [
-            "babel-preset-latest",
-            {
-              "es2015": {
-                "modules": false
-              }
-            }
-          ],
-          "babel-preset-stage-1",
-          "babel-preset-react"
-        ],
-        "plugins": [
-          "babel-plugin-transform-react-jsx-source",
-          "babel-plugin-transform-react-jsx-self",
-          "react-hot-loader/babel"
-        ]
-      },
-      "webpack-production": {
-        "presets": [
-          "babel-preset-react-optimize",
-          [
-            "babel-preset-latest",
-            {
-              "es2015": {
-                "modules": false
-              }
-            }
-          ],
-          "babel-preset-stage-1",
-          "babel-preset-react"
-        ]
       }
     }
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "./node_modules/phenomic/lib/eslint-config-recommended/index.js",
-      "pebble"
-    ],
-    "rules": {
-      "arrow-body-style": [2, "as-needed"],
-      "arrow-parens": [2, "always"],
-      "comma-dangle": [2, "always-multiline"],
-      "curly": [2, "all"],
-      "max-len": [1, 120],
-      "no-restricted-properties": [2, {
-          "object": "describe",
-          "property": "only"
-        }, {
-          "object": "it",
-          "property": "only"
-        }
-      ],
-      "no-unused-vars": [2, {"argsIgnorePattern": "^_.*"}],
-      "require-jsdoc": 0,
-      "strict": 0,
-      "valid-jsdoc": 2,
-      "object-curly-spacing": [2, "always"]
-    }
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard"
-  },
   "devDependencies": {
+    "autoprefixer": "^6.5.2",
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.0.0",
@@ -154,8 +90,6 @@
     "redux": "^3.0.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.0",
-    "stylelint": "^7.2.0",
-    "stylelint-config-standard": "^13.0.0",
     "webpack": "^1.11.0",
     "whatwg-fetch": "^0.11.0"
   }

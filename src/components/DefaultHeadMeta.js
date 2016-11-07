@@ -6,14 +6,13 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
     <Helmet
       meta={ [
         {
-          name: 'generator', content: `${
-          process.env.PHENOMIC_NAME } ${ process.env.PHENOMIC_VERSION }`,
+          name: 'generator', content: `${ process.env.PHENOMIC_NAME } ${ process.env.PHENOMIC_VERSION }`,
         },
         { property: 'og:site_name', content: pkg.name },
-        { name: 'twitter:site', content: `@${ pkg.twitter }` },
+        // { name: 'twitter:site', content: `@${ pkg.twitter }` },
       ] }
       script={ [
-        { src: 'https://cdn.polyfill.io/v2/polyfill.min.js' },
+        // { src: 'https://cdn.polyfill.io/v2/polyfill.min.js' },
       ] }
     />
 
