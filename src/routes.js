@@ -6,6 +6,9 @@ import AppContainer from './AppContainer';
 import Page from './layouts/Page';
 import PageError from './layouts/PageError';
 import Homepage from './layouts/Homepage';
+import Who from './layouts/Who';
+import What from './layouts/What';
+import Portfolio from './layouts/Portfolio';
 
 const PageContainer = (props) => (
   <PhenomicPageContainer
@@ -14,6 +17,9 @@ const PageContainer = (props) => (
       Page,
       PageError,
       Homepage,
+      Who,
+      What,
+      Portfolio,
     }}
   />
 );

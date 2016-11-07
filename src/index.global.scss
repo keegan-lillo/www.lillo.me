@@ -1,3 +1,5 @@
+@import "lillo";
+
 /* Using global sytles is not recommended, prefer local styles via CSS Modules */
 
 /*
@@ -35,6 +37,26 @@ body {
 
   /* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 100;
+}
+
+p {
+  margin: 0 0 modular-scale(1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  font-weight: $font-weight-semibold;
+  margin: 0 0 modular-scale(-2);
+  line-height: modular-scale(1);
+}
+
+h1 {
+  font-size: modular-scale(3);
+}
+
+h2 {
+  font-size: modular-scale(2);
 }
 
 /*
@@ -45,7 +67,7 @@ body {
  */
 
 .phenomic-HeadingAnchor {
-
+  display: none;
 }
 
 /* minimal styling, prefer removing this and use local styles */

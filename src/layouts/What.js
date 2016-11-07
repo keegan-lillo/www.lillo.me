@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Page from './Page';
+import enhanceCollection from 'phenomic/lib/enhance-collection';
+import PortfolioList from '../components/PortfolioList.js';
 
-const What = (props) => (
-  <Page { ...props }>
-    <h2>WHAT</h2>
-  </Page>
-);
+const What = (props, { collection }) => {
+  const portfolioItems = enhanceCollection(collection, {
+    filter: { layout: 'Portfolio' },
+    sort: 'order',
+  });
 
-What.contextTypes = {};
+  return (
+    <Page { ...props }>
+      <PortfolioList items={ portfolioItems }/>
+    </Page>
+  );
+};
+
+What.contextTypes = {
+  collection: PropTypes.array.isRequired,
+};
 
 export default What;

@@ -1,6 +1,3 @@
 ---
-title: Keegan Lillo - Web Developer
-layout: Homepage
+layout: Page
 ---
-
-Content

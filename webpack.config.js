@@ -73,7 +73,7 @@ export default (config = {}) => {
                 '[path][name]--[local]--[hash:base64:5]'} 
                 ${config.dev && '&sourceMap'}`,
               'postcss',
-              `sass?${config.dev && 'sourceMap'}`,
+              'sass',
             ]
           ),
         },
@@ -86,7 +86,7 @@ export default (config = {}) => {
             [
               `css?${config.dev && '&sourceMap'}`,
               'postcss',
-              `sass?${config.dev && 'sourceMap'}`,
+              'sass',
             ]
           ),
         },
@@ -104,12 +104,23 @@ export default (config = {}) => {
         // svg as raw string to be inlined
         {
           test: /\.svg$/,
-          loader: 'raw-loader',
+          loader: 'svg-inline',
         },
       ],
+
     },
 
     postcss: postcssPlugins,
+
+    sassLoader: {
+      ...config.dev && {
+        sourceMap: true,
+      },
+      includePaths: [
+        './src/lib',
+        ...require('bourbon').includePaths,
+      ],
+    },
 
     plugins: [
       new ExtractTextPlugin('[name].[hash].css', { disable: config.dev }),
