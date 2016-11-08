@@ -1,5 +1,5 @@
 ---
 title: Mercedes-Benz Ultimate Fans Competition
-layout: Portfolio
+component: Portfolio
 order: 6
 ---

@@ -1,3 +1,4 @@
 ---
-layout: Page
+layout: AnimationContainer
+component: Homepage
 ---

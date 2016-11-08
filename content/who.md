@@ -1,6 +1,7 @@
 ---
 title: Who I Am
-layout: Who
+layout: AnimationContainer
+component: Who
 ---
 
 Hi there, I'm Keegan, a web developer with a focus on front-end. I have a strong design 

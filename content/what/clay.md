@@ -1,5 +1,5 @@
 ---
 title: Clay
-layout: Portfolio
+component: Portfolio
 order: 1
 ---

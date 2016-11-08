@@ -1,5 +1,5 @@
 ---
 title: Pebble Mobile App Health Charts
-layout: Portfolio
+component: Portfolio
 order: 3
 ---

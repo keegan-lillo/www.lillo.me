@@ -1,5 +1,5 @@
 ---
 title: Social Pulse - Publishing
-layout: Portfolio
+component: Portfolio
 order: 8
 ---

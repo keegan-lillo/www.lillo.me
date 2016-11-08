@@ -2,11 +2,13 @@ import React, { PropTypes } from 'react';
 
 import PortfolioItem from './PortfolioItem';
 
+import styles from './PortfolioList.scss';
+
 const PortfolioList = ({ items }) => (
   <div>
     {
       items.length && (
-        <ul>
+        <ul className={ styles.list }>
           {
             items.map(
               (item) => (

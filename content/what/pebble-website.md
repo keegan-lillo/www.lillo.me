@@ -1,5 +1,5 @@
 ---
 title: Pebble.com Website
-layout: Portfolio
+component: Portfolio
 order: 2
 ---

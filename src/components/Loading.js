@@ -5,8 +5,8 @@ import styles from './Loading.scss';
 
 TopBarProgressIndicator.config({
   barColors: {
-    '0': '#fff',
-    '1.0': '#fff',
+    '0': '#000',
+    '1.0': '#000',
   },
   shadowBlur: 5,
 });

@@ -1,5 +1,5 @@
 ---
 title: Social Pulse - Realtime
-layout: Portfolio
+component: Portfolio
 order: 9
 ---

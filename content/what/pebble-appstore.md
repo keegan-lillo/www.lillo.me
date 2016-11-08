@@ -1,5 +1,5 @@
 ---
 title: Pebble Appstore
-layout: Portfolio
+component: Portfolio
 order: 4
 ---

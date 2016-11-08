@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import invariant from 'invariant';
 import { BodyContainer, joinUri } from 'phenomic';
 
-import Loading from '../components/Loading';
+
 
 import styles from './Page.scss';
 
@@ -12,6 +12,8 @@ const Page = ({ isLoading, __filename, __url, head, body, header, footer, childr
     typeof head.title === 'string',
     `Your page '${ __filename }' needs a title`
   );
+  
+  console.log('KEEGAN: children', children);
 
   let metaTitle = head.metaTitle ? head.metaTitle : head.title;
   metaTitle = 'Keegan Lillo - Web Developer' + (metaTitle && ` - ${metaTitle}`);
@@ -34,11 +36,7 @@ const Page = ({ isLoading, __filename, __url, head, body, header, footer, childr
         head.title && <h1 className={ styles.heading }>{ head.title }</h1>
       }
       { header }
-      {
-        isLoading ?
-          <Loading /> :
-          <BodyContainer>{ body }</BodyContainer>
-      }
+      <BodyContainer>{ body }</BodyContainer>
       { children }
       { footer }
     </div>

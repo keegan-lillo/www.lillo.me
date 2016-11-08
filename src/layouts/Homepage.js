@@ -1,8 +1,7 @@
 import React from 'react';
-import Page from './Page';
 
 const Homepage = (props) => (
-  <Page { ...props } />
+  <div>{ props.children }</div>
 );
 
 Homepage.contextTypes = {};

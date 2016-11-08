@@ -1,4 +1,5 @@
 ---
 title: What I Do
-layout: What
+layout: AnimationContainer
+component: What
 ---

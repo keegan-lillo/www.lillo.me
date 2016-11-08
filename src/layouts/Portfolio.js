@@ -1,8 +1,8 @@
 import React from 'react';
-import Page from './Page';
+import AnimationContainer from './AnimationContainer';
 
 const Portfolio = (props) => (
-  <Page { ...props }></Page>
+  <div>{ props.children }</div>
 );
 
 Portfolio.contextTypes = {};
